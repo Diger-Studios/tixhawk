@@ -447,6 +447,11 @@
         }
       };
 
+      // Expose functions to inline onclick handlers
+      window.openSignupDialog = openSignupDialog;
+      window.closeSignupDialog = closeSignupDialog;
+      window.scrollToSection = scrollToSection;
+
       // Close modal on Escape or backdrop click
       document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeSignupDialog(); });
       var dlg = document.getElementById('signup-dialog');
