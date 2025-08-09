@@ -22,12 +22,12 @@
   <meta property="twitter:description" content="Join the waitlist for instant SMS ticket alerts. Early access members get 14 days free. Limited spots available." />
   <meta property="twitter:image" content="https://tixhawk.com/og-image.png" />
 
-  <!-- Google Analytics (replace GA_MEASUREMENT_ID) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMTC6B64CY"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);} gtag('js', new Date());
-    gtag('config', 'GA_MEASUREMENT_ID');
+    gtag('config', 'G-ZMTC6B64CY');
   </script>
 
   <!-- Facebook Pixel (replace YOUR_PIXEL_ID) -->
@@ -417,6 +417,7 @@
           trackEvent('waitlist_signup', { section: source, signup_type: 'early_access' });
           if (typeof gtag !== 'undefined') {
             gtag('event', 'signup', { event_category: 'waitlist', event_label: source });
+            gtag('event', 'generate_lead', { method: 'waitlist', source: source });
           }
           if (typeof fbq !== 'undefined') {
             fbq('track', 'Lead', { content_name: 'Waitlist Signup', content_category: source });
