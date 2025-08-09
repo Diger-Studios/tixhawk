@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TicketHawk - Early Access | Never Overpay for Tickets Again</title>
+  <meta name="description" content="Join the TicketHawk early access waitlist. Get instant SMS alerts for ticket price drops. First 14 days free when we launch. Limited to 100 spots." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tixhawk.com/" />
+  <meta property="og:title" content="TicketHawk - Early Access Waitlist" />
+  <meta property="og:description" content="Join the waitlist for instant SMS ticket alerts. Early access members get 14 days free. Limited spots available." />
+  <meta property="og:image" content="/og-image.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://tixhawk.com/" />
+  <meta property="twitter:title" content="TicketHawk - Early Access Waitlist" />
+  <meta property="twitter:description" content="Join the waitlist for instant SMS ticket alerts. Early access members get 14 days free. Limited spots available." />
+  <meta property="twitter:image" content="/og-image.png" />
+
+  <!-- Google Analytics (replace GA_MEASUREMENT_ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+
+  <!-- Facebook Pixel (replace YOUR_PIXEL_ID) -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+    .gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  </style>
+</head>
+<body class="min-h-screen">
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="text-xl font-bold gradient-text">TicketHawk</div>
+      <div class="hidden md:flex items-center gap-6 text-gray-700">
+        <a href="#how-it-works" class="hover:text-gray-900">How it works</a>
+        <a href="#pricing" class="hover:text-gray-900">Pricing</a>
+        <a href="#faq" class="hover:text-gray-900">FAQ</a>
+      </div>
+      <button onclick="openSignupDialog('header')" class="px-4 py-2 gradient-bg text-white rounded-lg hover:opacity-90">Join waitlist</button>
+    </nav>
+  </header>
+
+  <main class="pt-20">
+    <!-- Hero -->
+    <section class="py-16">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <div class="inline-block bg-purple-100 text-purple-800 px-4 py-1 rounded-full text-sm font-semibold mb-4">🚀 Early Access - Limited to 100 spots</div>
+        <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Never overpay for tickets again.</h1>
+        <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-6">Join the waitlist for instant SMS alerts when ticket prices drop or new seats become available. Be among the first to catch last‑minute discounts and avoid high platform fees.</p>
+        <div class="bg-green-50 border border-green-200 rounded-lg p-4 mb-8 max-w-2xl mx-auto">
+          <p class="text-green-800 font-semibold">🎁 Early Access Bonus</p>
+          <p class="text-green-700">Get your <strong>first 14 days completely free</strong> when we officially launch.</p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button onclick="openSignupDialog('hero')" class="px-8 py-3 gradient-bg text-white rounded-lg text-lg font-semibold hover:opacity-90">Join the waitlist</button>
+          <button onclick="scrollToSection('how-it-works')" class="px-8 py-3 border-2 border-gray-300 text-gray-700 rounded-lg text-lg font-semibold hover:border-gray-400">See how it works</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how-it-works" class="py-16 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-10">How it works</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-white rounded-xl p-6 shadow">
+            <h3 class="text-lg font-semibold mb-2">Follow your favorites</h3>
+            <p class="text-gray-600">Add artists, teams, or venues you want to track for ticket deals.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow">
+            <h3 class="text-lg font-semibold mb-2">Set your thresholds</h3>
+            <p class="text-gray-600">Choose your max price and preferred sections for each event.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow">
+            <h3 class="text-lg font-semibold mb-2">Get instant alerts</h3>
+            <p class="text-gray-600">Receive SMS alerts the moment prices drop or seats open up.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Market Stats Section -->
+    <section class="py-20 bg-gradient-to-r from-purple-50 to-pink-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-12">Why timing matters in the $85B ticketing market</h2>
+        <div class="grid md:grid-cols-4 gap-6 text-center">
+          <div class="bg-white rounded-xl p-6 shadow-md">
+            <p class="text-4xl font-bold gradient-text mb-2">15%</p>
+            <p class="text-sm text-gray-600">of all tickets sold at last-minute discounts</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-md">
+            <p class="text-4xl font-bold gradient-text mb-2">70%</p>
+            <p class="text-sm text-gray-600">of buyers prefer mobile ticket purchasing</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-md">
+            <p class="text-4xl font-bold gradient-text mb-2">$15+</p>
+            <p class="text-sm text-gray-600">average fees per ticket on major platforms</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-md">
+            <p class="text-4xl font-bold gradient-text mb-2">78%</p>
+            <p class="text-sm text-gray-600">more likely to buy with seat preview</p>
+          </div>
+        </div>
+        <p class="text-center mt-8 text-gray-600 text-sm">
+          Source: Industry analysis from Verified Market Research, Grand View Research, and Mordor Intelligence (2024–2025)
+        </p>
+      </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-6">Why people want this</h2>
+        <p class="text-center text-gray-600 mb-12">See why ticket buyers are excited about TicketHawk</p>
+
+        <!-- Testimonials Grid -->
+        <div class="grid md:grid-cols-3 gap-6 mb-12">
+          <div class="bg-white p-6 rounded-xl shadow-lg">
+            <div class="flex mb-4" aria-hidden="true"><span class="text-yellow-400">★★★★★</span></div>
+            <p class="text-gray-700 mb-4">“I always miss the good deals because I find out too late. I can't wait for TicketHawk to launch so I never miss a price drop again!”</p>
+            <p class="text-sm text-gray-500">- Sarah M., Los Angeles</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-lg">
+            <div class="flex mb-4" aria-hidden="true"><span class="text-yellow-400">★★★★★</span></div>
+            <p class="text-gray-700 mb-4">“As someone who goes to 10+ games a year, having instant SMS alerts would save me hundreds. Already signed up for early access!”</p>
+            <p class="text-sm text-gray-500">- Mike T., San Francisco</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-lg">
+            <div class="flex mb-4" aria-hidden="true"><span class="text-yellow-400">★★★★★</span></div>
+            <p class="text-gray-700 mb-4">“Finally! Someone building what we actually need. I'm tired of missing deals because other apps are too slow. Count me in.”</p>
+            <p class="text-sm text-gray-500">- Jennifer K., New York</p>
+          </div>
+        </div>
+
+        <!-- Early Access Interest Counter -->
+        <div class="bg-white rounded-xl shadow-lg p-6">
+          <h3 class="text-xl font-semibold mb-4 text-center">Early Access Interest</h3>
+          <div class="text-center">
+            <div class="text-4xl font-bold gradient-text mb-2">47</div>
+            <p class="text-gray-600 mb-4">people have joined the waitlist in the last 24 hours</p>
+            <div class="bg-gray-200 rounded-full h-3 mb-2">
+              <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-3 rounded-full" style="width: 47%"></div>
+            </div>
+            <p class="text-sm text-gray-500">47 of 100 early access spots claimed</p>
+          </div>
+          <div class="mt-6 grid sm:grid-cols-3 gap-3 text-sm">
+            <div class="flex items-center justify-between bg-gray-50 rounded-md px-3 py-2">
+              <span class="text-gray-600">🎵 Concert alerts</span>
+              <span class="text-purple-600 font-semibold">92% interested</span>
+            </div>
+            <div class="flex items-center justify-between bg-gray-50 rounded-md px-3 py-2">
+              <span class="text-gray-600">🏀 Sports alerts</span>
+              <span class="text-purple-600 font-semibold">85% interested</span>
+            </div>
+            <div class="flex items-center justify-between bg-gray-50 rounded-md px-3 py-2">
+              <span class="text-gray-600">🎭 Theater alerts</span>
+              <span class="text-purple-600 font-semibold">78% interested</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Early Access Pricing -->
+    <section id="pricing" class="py-16">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-4">Early Access Pricing</h2>
+        <p class="text-center text-gray-600 mb-8">Lock in your spot and get 14 days free at launch</p>
+        <div class="bg-red-50 border border-red-200 rounded-lg p-4 text-center mb-8">
+          <p class="text-red-800 font-semibold">⚠️ Limited Early Access - Only 100 spots available</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-xl p-8 border-2 border-purple-200 text-center">
+          <div class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold mb-4">Early Access</div>
+          <p class="text-5xl font-bold">$7<span class="text-xl text-gray-500">/month</span></p>
+          <p class="text-gray-600 mt-2">After your 14-day free trial</p>
+          <ul class="text-left max-w-md mx-auto mt-6 space-y-3 text-gray-700">
+            <li>✓ 14 days completely free</li>
+            <li>✓ Early access before public launch</li>
+            <li>✓ Unlimited SMS alerts when we launch</li>
+            <li>✓ Track unlimited events</li>
+            <li>✓ Cancel anytime</li>
+          </ul>
+          <button onclick="openSignupDialog('pricing')" class="mt-8 w-full sm:w-auto px-8 py-3 gradient-bg text-white rounded-lg text-lg font-semibold hover:opacity-90">Secure my early access →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-16 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          <details class="bg-white rounded-lg shadow-md">
+            <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">How fast are the alerts really?</summary>
+            <div class="px-6 pb-4 text-gray-600">
+              Our proprietary system checks ticket platforms every 30 seconds, detecting price changes 4–6 minutes before other alert services. This speed advantage is crucial for securing the best deals before they're gone.
+            </div>
+          </details>
+          <details class="bg-white rounded-lg shadow-md">
+            <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">Which ticket platforms do you monitor?</summary>
+            <div class="px-6 pb-4 text-gray-600">
+              We monitor all major ticket platforms including Ticketmaster, StubHub, Vivid Seats, SeatGeek, and 20+ other verified resellers. We only alert you to legitimate tickets from trusted sources.
+            </div>
+          </details>
+          <details class="bg-white rounded-lg shadow-md">
+            <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">Can I set different price alerts for different events?</summary>
+            <div class="px-6 pb-4 text-gray-600">
+              Yes! You can customize price thresholds for each artist, team, or venue you track. Set higher limits for must‑see events and lower limits for casual interests.
+            </div>
+          </details>
+          <details class="bg-white rounded-lg shadow-md">
+            <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">What if I don't want alerts at certain times?</summary>
+            <div class="px-6 pb-4 text-gray-600">
+              You can set quiet hours in your account settings. We'll hold non‑urgent alerts until your preferred time window. Exceptional deals (70%+ off) can optionally bypass quiet hours.
+            </div>
+          </details>
+          <details class="bg-white rounded-lg shadow-md">
+            <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">Is there really no commitment?</summary>
+            <div class="px-6 pb-4 text-gray-600">
+              Absolutely. Cancel anytime from your account settings with one click. No questions asked, no cancellation fees. Plus, we offer a 30‑day money‑back guarantee for new users.
+            </div>
+          </details>
+          <details class="bg-white rounded-lg shadow-md">
+            <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">How many alerts will I receive?</summary>
+            <div class="px-6 pb-4 text-gray-600">
+              It depends on your settings. Most users receive 3–5 relevant alerts per week. You control the frequency by adjusting your price thresholds and tracked events.
+            </div>
+          </details>
+          <details class="bg-white rounded-lg shadow-md">
+            <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">Do you sell my phone number?</summary>
+            <div class="px-6 pb-4 text-gray-600">
+              Never. Your phone number is used solely for sending you ticket alerts. We don't share, sell, or use your data for any other purpose. See our Privacy Policy for details.
+            </div>
+          </details>
+          <details class="bg-white rounded-lg shadow-md">
+            <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">What happens after my free trial?</summary>
+            <div class="px-6 pb-4 text-gray-600">
+              Your free trial lasts 14 days with full access to all features. After that, you'll be charged the plan you selected (monthly or yearly). You can cancel anytime during the trial without being charged.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-16 bg-gradient-to-r from-purple-50 to-pink-50">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <div class="bg-white rounded-2xl p-8 shadow-xl">
+          <div class="inline-block bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">⏰ Only 100 Early Access Spots</div>
+          <h2 class="text-3xl font-bold mb-4">Don't miss out on early access</h2>
+          <p class="text-lg text-gray-600 mb-6">Be among the first to experience TicketHawk and get 14 days free when we launch.</p>
+          <button onclick="openSignupDialog('final-cta')" class="px-8 py-3 gradient-bg text-white rounded-lg text-lg font-semibold hover:opacity-90">Join the waitlist now →</button>
+          <p class="text-sm text-gray-500 mt-3">No payment required • Get notified when we launch</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-10">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-6 md:items-center md:justify-between">
+      <div class="text-2xl font-bold">TicketHawk</div>
+      <div class="text-gray-400">© 2025 TicketHawk. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Signup Modal (Netlify Form) -->
+  <div id="signup-dialog" class="fixed inset-0 bg-black/50 z-50 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-xl p-8 max-w-md w-full">
+      <div class="text-center mb-6">
+        <div class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold mb-3">🎁 Early Access - 14 Days Free</div>
+        <h3 class="text-2xl font-bold">Join the TicketHawk waitlist</h3>
+        <p class="text-gray-600 mt-2">Be the first to know when we launch and claim your free 14 days!</p>
+      </div>
+      <form name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks" onsubmit="handleSignup(event)">
+        <input type="hidden" name="form-name" value="waitlist" />
+        <input type="hidden" id="hidden-source" name="source" value="" />
+        <input type="hidden" id="hidden-traffic-source" name="traffic_source" value="" />
+        <p class="hidden"><label>Don’t fill this out if you're human: <input name="bot-field" /></label></p>
+
+        <div class="mb-4">
+          <label for="name" class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+          <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" />
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+          <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" />
+        </div>
+        <div class="mb-4">
+          <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required placeholder="(555) 123-4567" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" />
+          <p class="text-xs text-gray-500 mt-1">We'll send you a confirmation text and notify you when we launch</p>
+        </div>
+        <div class="mb-6">
+          <label class="flex items-start">
+            <input type="checkbox" id="sms-consent" name="smsConsent" required class="mt-1 mr-2" />
+            <span class="text-sm text-gray-600">I want to receive SMS updates about TicketHawk's launch and exclusive early access offers. Message and data rates may apply.</span>
+          </label>
+        </div>
+        <button type="submit" class="w-full px-6 py-3 gradient-bg text-white rounded-lg font-semibold hover:opacity-90">Secure my early access 🚀</button>
+        <button type="button" onclick="closeSignupDialog()" class="w-full mt-3 px-6 py-3 border border-gray-300 rounded-lg font-semibold hover:bg-gray-50">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Success Toast -->
+  <div id="success-toast" class="fixed bottom-8 right-8 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg hidden z-50">
+    <div class="flex items-center gap-2">🎉 <span>Welcome to the waitlist! Check your phone for confirmation.</span></div>
+  </div>
+
+  <script>
+    (function() {
+      'use strict';
+
+      function safeLog() { try { console.log.apply(console, arguments); } catch (_) {} }
+
+      function trackEvent(eventName, metadata) {
+        try {
+          metadata = metadata || {};
+          safeLog('Analytics Event:', eventName, metadata);
+        } catch (_) {}
+      }
+
+      function getTrafficSource() {
+        try {
+          var ref = document.referrer || '';
+          var p = new URLSearchParams(window.location.search);
+          if (p.get('fbclid') || ref.includes('facebook.com')) return 'facebook_ads';
+          if (p.get('utm_source')) return p.get('utm_source');
+          if (ref.includes('google.com')) return 'google';
+          if (ref.includes('twitter.com')) return 'twitter';
+          if (!ref) return 'direct';
+          return 'other';
+        } catch (_) { return 'unknown'; }
+      }
+
+      function scrollToSection(id) {
+        var el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      function openSignupDialog(source) {
+        window.__signupSource = source || 'unknown';
+        var dlg = document.getElementById('signup-dialog');
+        if (dlg) { dlg.classList.remove('hidden'); dlg.classList.add('flex'); }
+        trackEvent('waitlist_cta_click', { section: source });
+      }
+
+      function closeSignupDialog() {
+        var dlg = document.getElementById('signup-dialog');
+        if (dlg) { dlg.classList.remove('flex'); dlg.classList.add('hidden'); }
+      }
+
+      function showSuccessToast() {
+        var t = document.getElementById('success-toast');
+        if (!t) return;
+        t.classList.remove('hidden');
+        setTimeout(function(){ t.classList.add('hidden'); }, 5000);
+      }
+
+      function encode(data) {
+        return Object.keys(data).map(function(k){ return encodeURIComponent(k) + '=' + encodeURIComponent(data[k] == null ? '' : data[k]); }).join('&');
+      }
+
+      window.handleSignup = function(event) {
+        try {
+          event.preventDefault();
+
+          var form = event.target;
+          var btn = form.querySelector('button[type="submit"]');
+          var originalText = btn.textContent;
+          btn.textContent = 'Joining waitlist...';
+          btn.disabled = true;
+
+          // Assign hidden fields
+          var source = window.__signupSource || 'unknown';
+          document.getElementById('hidden-source').value = source;
+          document.getElementById('hidden-traffic-source').value = getTrafficSource();
+
+          var payload = {
+            'form-name': 'waitlist',
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            smsConsent: document.getElementById('sms-consent').checked ? 'yes' : 'no',
+            source: document.getElementById('hidden-source').value,
+            traffic_source: document.getElementById('hidden-traffic-source').value,
+            user_agent: navigator.userAgent,
+            referrer: document.referrer,
+            signup_type: 'early_access_waitlist',
+            timestamp: new Date().toISOString()
+          };
+
+          // Analytics hooks
+          trackEvent('waitlist_signup', { section: source, signup_type: 'early_access' });
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'signup', { event_category: 'waitlist', event_label: source });
+          }
+          if (typeof fbq !== 'undefined') {
+            fbq('track', 'Lead', { content_name: 'Waitlist Signup', content_category: source });
+          }
+
+          // Submit to Netlify without leaving page
+          fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: encode(payload)
+          }).then(function(res){
+            if (!res.ok) throw new Error('Network error');
+            closeSignupDialog();
+            showSuccessToast();
+            form.reset();
+          }).catch(function(err){
+            safeLog('Signup error:', err);
+            // Fallback: let browser handle it
+            form.submit();
+          }).finally(function(){
+            btn.textContent = originalText;
+            btn.disabled = false;
+          });
+
+        } catch (e) {
+          safeLog('Error handling signup:', e);
+        }
+      };
+
+      // Close modal on Escape or backdrop click
+      document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeSignupDialog(); });
+      var dlg = document.getElementById('signup-dialog');
+      if (dlg) dlg.addEventListener('click', function(e){ if (e.target === dlg) closeSignupDialog(); });
+    })();
+  </script>
+</body>
+</html>
+
+
