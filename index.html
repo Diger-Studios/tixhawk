@@ -86,10 +86,11 @@
           <div class="w-full">
             <!-- Desktop/Laptop: Horizontal video -->
             <video
+              id="hero-video-desktop"
               class="hidden md:block w-full max-w-xl ml-auto rounded-xl shadow-lg"
               src="./media_assets/Video_Creation_for_TicketHawk_Persona.mp4"
               controls
-              preload="metadata"
+              preload="auto"
               autoplay
               muted
               loop
@@ -100,10 +101,11 @@
 
             <!-- Mobile: Vertical video (shown below copy on small screens) -->
             <video
+              id="hero-video-mobile"
               class="block md:hidden w-full max-w-sm mx-auto rounded-xl shadow-lg mt-6"
               src="./media_assets/Vertical_Video_Generation_for_Mobile.mp4"
               controls
-              preload="metadata"
+              preload="auto"
               autoplay
               muted
               loop
@@ -484,6 +486,26 @@
           safeLog('Error handling signup:', e);
         }
       };
+
+      // Attempt autoplay programmatically for browsers that block attribute-based autoplay
+      function tryAutoplay(videoId) {
+        var el = document.getElementById(videoId);
+        if (!el) return;
+        var playPromise = el.play();
+        if (playPromise && typeof playPromise.then === 'function') {
+          playPromise.catch(function(){
+            // If autoplay is blocked, ensure muted is set then try again
+            el.muted = true;
+            el.play().catch(function(){ /* swallow */ });
+          });
+        }
+      }
+
+      // Kick off autoplay after DOM ready
+      document.addEventListener('DOMContentLoaded', function(){
+        tryAutoplay('hero-video-desktop');
+        tryAutoplay('hero-video-mobile');
+      });
 
       // Expose functions to inline onclick handlers
       window.openSignupDialog = openSignupDialog;
