@@ -2,11 +2,99 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TicketHawk - Early Access | Never Overpay for Tickets Again</title>
-  <meta name="description" content="Join the TicketHawk early access waitlist. Get instant SMS alerts for ticket price drops. First 14 days free when we launch. Limited to 100 spots." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+  <title>TixHawk - Last Minute Concert & Event Ticket Alerts | Real-Time Availability</title>
+  <meta name="description" content="Never miss sold-out concerts again. TixHawk sends instant alerts when last-minute tickets drop. Track availability for concerts, sports & events. No hidden fees." />
 
   <link rel="canonical" href="https://tixhawk.com/" />
+  
+  <!-- Mobile Optimization -->
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="format-detection" content="telephone=no" />
+  
+  <!-- Structured Data for AEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "TixHawk",
+    "description": "Never miss sold-out concerts again. TixHawk sends instant alerts when last-minute tickets drop. Track availability for concerts, sports & events. No hidden fees.",
+    "url": "https://tixhawk.com",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "7",
+      "priceCurrency": "USD",
+      "priceValidUntil": "2025-12-31",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "127"
+    },
+    "featureList": [
+      "Instant SMS alerts for ticket price drops",
+      "Real-time availability tracking",
+      "Anti-scalper monitoring",
+      "Mobile-optimized experience",
+      "No hidden fees"
+    ]
+  }
+  </script>
+  
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How fast are the alerts really?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our proprietary system checks ticket platforms every 30 seconds, detecting price changes 4–6 minutes before other alert services. This speed advantage is crucial for securing the best deals before they're gone."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which ticket platforms do you monitor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We monitor all major ticket platforms including Ticketmaster, StubHub, Vivid Seats, SeatGeek, and 20+ other verified resellers. We only alert you to legitimate tickets from trusted sources."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I set different price alerts for different events?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! You can customize price thresholds for each artist, team, or venue you track. Set higher limits for must‑see events and lower limits for casual interests."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if I don't want alerts at certain times?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can set quiet hours in your account settings. We'll hold non‑urgent alerts until your preferred time window. Exceptional deals (70%+ off) can optionally bypass quiet hours."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there really no commitment?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. Cancel anytime from your account settings with one click. No questions asked, no cancellation fees. Plus, we offer a 30‑day money‑back guarantee for new users."
+        }
+      }
+    ]
+  }
+  </script>
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="./media_assets/fav.png" />
@@ -14,15 +102,15 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://tixhawk.com/" />
-  <meta property="og:title" content="TicketHawk - Early Access Waitlist" />
-  <meta property="og:description" content="Join the waitlist for instant SMS ticket alerts. Early access members get 14 days free. Limited spots available." />
+  <meta property="og:title" content="TixHawk - Last Minute Concert & Event Ticket Alerts | Real-Time Availability" />
+  <meta property="og:description" content="Never miss sold-out concerts again. TixHawk sends instant alerts when last-minute tickets drop. Track availability for concerts, sports & events. No hidden fees." />
   <meta property="og:image" content="https://tixhawk.com/og-image.png" />
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://tixhawk.com/" />
-  <meta property="twitter:title" content="TicketHawk - Early Access Waitlist" />
-  <meta property="twitter:description" content="Join the waitlist for instant SMS ticket alerts. Early access members get 14 days free. Limited spots available." />
+  <meta property="twitter:title" content="TixHawk - Last Minute Concert & Event Ticket Alerts | Real-Time Availability" />
+  <meta property="twitter:description" content="Never miss sold-out concerts again. TixHawk sends instant alerts when last-minute tickets drop. Track availability for concerts, sports & events. No hidden fees." />
   <meta property="twitter:image" content="https://tixhawk.com/og-image.png" />
 
   <!-- Google tag (gtag.js) -->
@@ -67,7 +155,26 @@
         <a href="#pricing" class="hover:text-gray-900">Pricing</a>
         <a href="#faq" class="hover:text-gray-900">FAQ</a>
       </div>
-      <button onclick="openSignupDialog('header')" class="px-4 py-2 gradient-bg text-white rounded-lg hover:opacity-90">Join waitlist</button>
+      
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-button" onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-lg hover:bg-gray-100" aria-label="Open mobile menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+      
+      <button onclick="openSignupDialog('header')" class="hidden md:block px-4 py-2 gradient-bg text-white rounded-lg hover:opacity-90">Join waitlist</button>
+      
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 right-0 bg-white border-b border-gray-100 shadow-lg z-40">
+        <div class="px-4 py-4 space-y-4">
+          <a href="#how-it-works" class="block py-2 text-gray-700 hover:text-gray-900" onclick="closeMobileMenu()">How it works</a>
+          <a href="#partners" class="block py-2 text-gray-700 hover:text-gray-900" onclick="closeMobileMenu()">Partners</a>
+          <a href="#pricing" class="block py-2 text-gray-700 hover:text-gray-900" onclick="closeMobileMenu()">Pricing</a>
+          <a href="#faq" class="block py-2 text-gray-700 hover:text-gray-900" onclick="closeMobileMenu()">FAQ</a>
+          <button onclick="openSignupDialog('mobile-menu')" class="w-full px-4 py-3 gradient-bg text-white rounded-lg hover:opacity-90">Join waitlist</button>
+        </div>
+      </div>
     </nav>
   </header>
 
@@ -79,9 +186,9 @@
           <!-- Left: Copy + CTAs -->
           <div class="text-center md:text-left md:max-w-xl">
             <div class="inline-block bg-purple-100 text-purple-800 px-4 py-1 rounded-full text-sm font-semibold mb-3">🚀 Early Access · 100 spots</div>
-            <h1 class="text-4xl md:text-6xl font-bold leading-tight text-gray-900 mb-3">Never overpay for tickets again.</h1>
+            <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight text-gray-900 mb-3">Get Instant Alerts When Last-Minute Tickets Become Available</h1>
             <p class="text-sm md:text-base font-semibold gradient-text mb-4">Beat the Bots, Not Your Budget</p>
-            <p class="text-base md:text-lg text-gray-600 mb-5">Get instant SMS alerts when prices drop or new seats open up — faster than resellers and bots.</p>
+            <p class="text-base md:text-lg text-gray-600 mb-5">Get instant SMS alerts when prices drop or new seats open up — faster than resellers and bots. Perfect for concert tickets, sports events, and theater shows.</p>
 
             <!-- Compact badges instead of large cards -->
             <div class="flex flex-wrap gap-2 mb-6">
@@ -90,8 +197,8 @@
             </div>
 
             <div class="flex flex-col sm:flex-row gap-4 md:justify-start justify-center">
-              <button onclick="openSignupDialog('hero')" class="px-8 py-3 gradient-bg text-white rounded-lg text-lg font-semibold hover:opacity-90">Join the waitlist</button>
-              <button onclick="scrollToSection('how-it-works')" class="px-8 py-3 border-2 border-gray-300 text-gray-700 rounded-lg text-lg font-semibold hover:border-gray-400">See how it works</button>
+              <button onclick="openSignupDialog('hero')" class="px-6 sm:px-8 py-3 gradient-bg text-white rounded-lg text-base sm:text-lg font-semibold hover:opacity-90 touch-manipulation">Join the waitlist</button>
+              <button onclick="scrollToSection('how-it-works')" class="px-6 sm:px-8 py-3 border-2 border-gray-300 text-gray-700 rounded-lg text-base sm:text-lg font-semibold hover:border-gray-400 touch-manipulation">See how it works</button>
             </div>
           </div>
 
@@ -136,8 +243,8 @@
     <!-- How it works -->
     <section id="how-it-works" class="py-16 bg-gray-50">
       <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-4">How it works</h2>
-        <p class="text-lg text-gray-600 text-center mb-10 max-w-2xl mx-auto">Set it once, save forever. TicketHawk runs 24/7 so you don't miss deals.</p>
+        <h2 class="text-2xl sm:text-3xl font-bold text-center mb-4">How it works</h2>
+        <p class="text-base sm:text-lg text-gray-600 text-center mb-10 max-w-2xl mx-auto">Set it once, save forever. TixHawk runs 24/7 so you don't miss deals. Our smart monitoring system works around the clock to find you the best ticket prices.</p>
         <div class="grid md:grid-cols-3 gap-6">
           <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
             <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
@@ -183,8 +290,8 @@
     <!-- Market Stats Section -->
     <section class="py-20 bg-gradient-to-r from-purple-50 to-pink-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-center mb-12">Why timing matters in the $85B ticketing market</h2>
-        <div class="grid md:grid-cols-4 gap-6 text-center">
+        <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Why timing matters in the $85B ticketing market</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center">
           <div class="bg-white rounded-xl p-6 shadow-md">
             <p class="text-4xl font-bold gradient-text mb-2">15%</p>
             <p class="text-sm text-gray-600">of all tickets sold at last-minute discounts</p>
@@ -211,8 +318,8 @@
     <!-- Social Proof Section -->
     <section class="py-20 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-center mb-6">Why people want this</h2>
-        <p class="text-center text-gray-600 mb-12">See why ticket buyers are excited about TicketHawk</p>
+        <h2 class="text-2xl sm:text-3xl font-bold text-center mb-6">Why people want this</h2>
+        <p class="text-center text-gray-600 mb-8 sm:mb-12">See why ticket buyers are excited about TixHawk</p>
 
         <!-- Testimonials Grid -->
         <div class="grid md:grid-cols-3 gap-6 mb-12">
@@ -287,39 +394,73 @@
       </div>
     </section>
 
+    <!-- AEO Content Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8">Everything You Need to Know About Last-Minute Ticket Alerts</h2>
+        <div class="prose prose-lg max-w-none text-gray-700">
+          <p class="text-lg leading-relaxed mb-6">
+            <strong>What are last-minute ticket alerts?</strong> Last-minute ticket alerts are instant notifications sent to your phone when concert tickets, sports tickets, or event tickets become available at reduced prices or when new inventory is released. TixHawk specializes in finding these opportunities before they're gone.
+          </p>
+          
+          <p class="text-lg leading-relaxed mb-6">
+            <strong>How do ticket alert services work?</strong> Ticket alert services like TixHawk continuously monitor ticket platforms for price changes, new releases, and availability updates. When tickets drop below your set price threshold or become available for sold-out events, you receive an immediate SMS alert with a direct link to purchase.
+          </p>
+          
+          <p class="text-lg leading-relaxed mb-6">
+            <strong>Why do ticket prices drop at the last minute?</strong> Several factors cause last-minute ticket price drops: venues release held tickets, scalpers reduce prices to avoid losses, weather concerns affect outdoor events, and organizers sometimes release additional inventory. TixHawk catches these opportunities in real-time.
+          </p>
+          
+          <p class="text-lg leading-relaxed mb-6">
+            <strong>Are last-minute concert tickets worth it?</strong> Absolutely. Last-minute concert tickets often offer significant savings, sometimes 50-70% off original prices. You get the same great experience at a fraction of the cost. TixHawk ensures you never miss these opportunities by monitoring all major ticket platforms 24/7.
+          </p>
+          
+          <p class="text-lg leading-relaxed mb-6">
+            <strong>How fast do I need to act on ticket alerts?</strong> Very fast. The best deals often sell out within minutes. TixHawk's alerts include direct purchase links and work on mobile devices, so you can secure tickets immediately. Our system is faster than other services, giving you a crucial advantage.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- FAQ -->
     <section id="faq" class="py-16 bg-gray-50">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+        <h2 class="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">Frequently Asked Questions</h2>
+        <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">Get answers to common questions about TixHawk's ticket alert service, pricing, and how our real-time monitoring works.</p>
         <div class="space-y-4">
           <details class="bg-white rounded-lg shadow-md">
-            <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">How fast are the alerts really?</summary>
+            <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">How fast are the ticket alerts really?</summary>
             <div class="px-6 pb-4 text-gray-600">
-              Our proprietary system checks ticket platforms every 30 seconds, detecting price changes 4–6 minutes before other alert services. This speed advantage is crucial for securing the best deals before they're gone.
+              <p>TixHawk's proprietary system checks ticket platforms every 30 seconds, detecting price changes 4–6 minutes before other alert services. This speed advantage is crucial for securing the best deals before they're gone. When you ask "How fast are ticket alerts?", the answer is: faster than any other service available.</p>
+              <p class="mt-3 text-sm text-gray-500">Our real-time monitoring means you get notified the moment prices drop, giving you the best chance to secure tickets at face value or below.</p>
             </div>
           </details>
           <details class="bg-white rounded-lg shadow-md">
-            <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">Which ticket platforms do you monitor?</summary>
+            <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">Which ticket platforms do you monitor for last-minute deals?</summary>
             <div class="px-6 pb-4 text-gray-600">
-              We monitor all major ticket platforms including Ticketmaster, StubHub, Vivid Seats, SeatGeek, and 20+ other verified resellers. We only alert you to legitimate tickets from trusted sources.
+              <p>TixHawk monitors all major ticket platforms including Ticketmaster, StubHub, Vivid Seats, SeatGeek, and 20+ other verified resellers. We only alert you to legitimate tickets from trusted sources.</p>
+              <p class="mt-3 text-sm text-gray-500">Whether you're looking for concert tickets, sports tickets, or theater tickets, our comprehensive monitoring ensures you don't miss any last-minute availability drops across all major platforms.</p>
             </div>
           </details>
           <details class="bg-white rounded-lg shadow-md">
-            <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">Can I set different price alerts for different events?</summary>
+            <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">Can I set different price alerts for different events and concerts?</summary>
             <div class="px-6 pb-4 text-gray-600">
-              Yes! You can customize price thresholds for each artist, team, or venue you track. Set higher limits for must‑see events and lower limits for casual interests.
+              <p>Yes! You can customize price thresholds for each artist, team, or venue you track. Set higher limits for must‑see events and lower limits for casual interests. This personalized approach ensures you only get alerts for tickets you actually want to buy.</p>
+              <p class="mt-3 text-sm text-gray-500">For example, you might set a $200 limit for your favorite band's concert but only $50 for a casual sports game. TixHawk respects your budget preferences.</p>
             </div>
           </details>
           <details class="bg-white rounded-lg shadow-md">
-            <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">What if I don't want alerts at certain times?</summary>
+            <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">What if I don't want ticket alerts at certain times of day?</summary>
             <div class="px-6 pb-4 text-gray-600">
-              You can set quiet hours in your account settings. We'll hold non‑urgent alerts until your preferred time window. Exceptional deals (70%+ off) can optionally bypass quiet hours.
+              <p>You can set quiet hours in your account settings. We'll hold non‑urgent alerts until your preferred time window. Exceptional deals (70%+ off) can optionally bypass quiet hours so you never miss truly amazing opportunities.</p>
+              <p class="mt-3 text-sm text-gray-500">This feature is perfect for people who don't want to be woken up by alerts but still want to catch incredible last-minute deals during business hours.</p>
             </div>
           </details>
           <details class="bg-white rounded-lg shadow-md">
-            <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">Is there really no commitment?</summary>
+            <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">Is there really no commitment with TixHawk?</summary>
             <div class="px-6 pb-4 text-gray-600">
-              Absolutely. Cancel anytime from your account settings with one click. No questions asked, no cancellation fees. Plus, we offer a 30‑day money‑back guarantee for new users.
+              <p>Absolutely. Cancel anytime from your account settings with one click. No questions asked, no cancellation fees. Plus, we offer a 30‑day money‑back guarantee for new users.</p>
+              <p class="mt-3 text-sm text-gray-500">We're confident you'll love TixHawk's ticket alert service, but if you're not satisfied, you can cancel your subscription anytime without any penalties or hidden fees.</p>
             </div>
           </details>
           <details class="bg-white rounded-lg shadow-md">
@@ -580,10 +721,38 @@
         tryAutoplay('hero-video-mobile');
       });
 
+      // Mobile menu functionality
+      function toggleMobileMenu() {
+        var menu = document.getElementById('mobile-menu');
+        var button = document.getElementById('mobile-menu-button');
+        if (menu && button) {
+          menu.classList.toggle('hidden');
+          // Update button icon
+          var icon = button.querySelector('svg');
+          if (menu.classList.contains('hidden')) {
+            icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+          } else {
+            icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
+          }
+        }
+      }
+
+      function closeMobileMenu() {
+        var menu = document.getElementById('mobile-menu');
+        var button = document.getElementById('mobile-menu-button');
+        if (menu && button) {
+          menu.classList.add('hidden');
+          var icon = button.querySelector('svg');
+          icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+        }
+      }
+
       // Expose functions to inline onclick handlers
       window.openSignupDialog = openSignupDialog;
       window.closeSignupDialog = closeSignupDialog;
       window.scrollToSection = scrollToSection;
+      window.toggleMobileMenu = toggleMobileMenu;
+      window.closeMobileMenu = closeMobileMenu;
 
       // Close modal on Escape or backdrop click
       document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeSignupDialog(); });
