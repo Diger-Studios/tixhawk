@@ -34,14 +34,16 @@ tixhawk/
 ├── src/
 │   └── input.css          # Tailwind source (edit this)
 ├── media_assets/
-│   ├── fav.png            # Favicon
-│   ├── Video_*.mp4        # Hero videos (mobile + desktop)
+│   └── fav.png            # Favicon
 ├── og-image.png           # Social media preview image (1200x630)
 ├── tailwind.config.js     # Tailwind configuration
 ├── netlify.toml           # Netlify deployment config
 ├── BRANDING.md            # Brand guidelines ⚠️ READ THIS
+├── SECURITY.md            # Security best practices
 └── README.md              # This file
 ```
+
+**Note**: Videos are hosted on ImageKit CDN and not stored in this repository.
 
 ## 🎨 Design System
 
@@ -101,7 +103,7 @@ Analytics tracking IDs and sensitive configuration are stored in the HTML files 
 1. **Security**: This is a public repo - see [SECURITY.md](./SECURITY.md) for what not to commit
 2. **Branding**: Always use "TicketHawk" in user-facing content (see BRANDING.md)
 3. **CSS**: Don't edit styles.css directly - use src/input.css
-4. **Videos**: Stored on ImageKit CDN, not in repo (see media_assets/ for local copies)
+4. **Videos**: Hosted exclusively on ImageKit CDN (not stored in repository)
 5. **OG Image**: Regenerate if branding/tagline changes
 
 ## 📞 Contact

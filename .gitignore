@@ -8,6 +8,11 @@ package-lock.json
 *.log
 .DS_Store
 
+# Media files (use CDN)
+media_assets/*.mp4
+media_assets/*.webm
+media_assets/*.mov
+
 # Python
 __pycache__/
 *.pyc
