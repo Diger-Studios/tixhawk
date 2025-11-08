@@ -3,64 +3,1231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TicketHawk - Early Access | Never Overpay for Tickets Again</title>
-    <meta name="description" content="Join the waitlist for TicketHawk - get instant SMS alerts for ticket price drops. Early access members get 14 days free when we launch. Limited spots available.">
+    <title>TicketHawk - Never Overpay for Tickets Again | Instant SMS Price Drop Alerts</title>
+    <meta name="description" content="Get instant SMS alerts for last-minute ticket price drops and new seat releases. Save up to 70% on concerts, sports, and events. 4-6 minutes faster than other platforms.">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tixhawk.com/">
-    <meta property="og:title" content="TicketHawk - Early Access Waitlist">
-    <meta property="og:description" content="Join the waitlist for instant SMS ticket alerts. Early access members get 14 days free. Limited spots available.">
+    <meta property="og:url" content="https://tickethawk.com/">
+    <meta property="og:title" content="TicketHawk - Never Overpay for Tickets Again">
+    <meta property="og:description" content="Get instant SMS alerts for last-minute ticket price drops. Save up to 70% on tickets.">
     <meta property="og:image" content="/og-image.png">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://tixhawk.com/">
-    <meta property="twitter:title" content="TicketHawk - Early Access Waitlist">
-    <meta property="twitter:description" content="Join the waitlist for instant SMS ticket alerts. Early access members get 14 days free. Limited spots available.">
+    <meta property="twitter:url" content="https://tickethawk.com/">
+    <meta property="twitter:title" content="TicketHawk - Never Overpay for Tickets Again">
+    <meta property="twitter:description" content="Get instant SMS alerts for last-minute ticket price drops. Save up to 70% on tickets.">
     <meta property="twitter:image" content="/og-image.png">
     
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMTC6B64CY"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-ZMTC6B64CY');
-    </script>
-    
-    <!-- Facebook Pixel -->
-    <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', 'YOUR_PIXEL_ID'); // Replace with your Facebook Pixel ID
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
-    
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Ensure smooth scrolling for the entire page */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Animations for visual interest */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes pulse-soft {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        @keyframes slide-up {
+            from { 
+                transform: translateY(20px); 
+                opacity: 0; 
+            }
+            to { 
+                transform: translateY(0); 
+                opacity: 1; 
+            }
+        }
+        
+        /* Animation classes */
+        .animate-float { 
+            animation: float 3s ease-in-out infinite; 
+        }
+        .animate-pulse-soft { 
+            animation: pulse-soft 2s ease-in-out infinite; 
+        }
+        .animate-slide-up { 
+            animation: slide-up 0.5s ease-out forwards; 
+        }
+        
+        /* Gradient styles for brand consistency */
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-gradient {
+            background: radial-gradient(ellipse at top, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+                        radial-gradient(ellipse at bottom right, rgba(118, 75, 162, 0.1) 0%, transparent 50%);
+        }
+        
+        /* Card hover effects for interactivity */
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        /* Ensure proper spacing with fixed header */
+        .main-content {
+            padding-top: 80px; /* Account for fixed header height */
+        }
+    </style>
 </head>
-<body class="bg-gradient-to-br from-purple-50 to-pink-50 min-h-screen flex items-center justify-center">
-    <div class="max-w-md mx-auto text-center p-8">
-                <div class="bg-white rounded-2xl shadow-xl p-8">
-            <div class="text-6xl mb-4">🎉</div>
-            <h1 class="text-3xl font-bold text-gray-900 mb-4">You're on the list!</h1>
-            <p class="text-gray-600 mb-6">Thanks for joining the TicketHawk waitlist. You'll be among the first to know when we launch!</p>
-            <div class="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
-                <p class="text-green-800 font-semibold">🎁 Your early access bonus:</p>
-                <p class="text-green-700">14 days completely free when we officially launch</p>
+<body class="min-h-screen">
+    <!-- Fixed Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center">
+            <div class="flex justify-between items-center w-full">
+                <!-- Logo and Desktop Navigation -->
+                <div class="flex items-center space-x-8">
+                    <div class="text-2xl font-bold gradient-text">TicketHawk</div>
+                    <div class="hidden md:flex space-x-6">
+                        <a href="#features" class="text-gray-600 hover:text-gray-900 transition-colors">Features</a>
+                        <a href="#how-it-works" class="text-gray-600 hover:text-gray-900 transition-colors">How it works</a>
+                        <a href="#pricing" class="text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
+                        <a href="#faq" class="text-gray-600 hover:text-gray-900 transition-colors">FAQ</a>
+                    </div>
+                </div>
+                <!-- CTA Buttons -->
+                <div class="flex items-center space-x-4">
+                    <button class="hidden sm:block text-gray-600 hover:text-gray-900 transition-colors">Login</button>
+                    <button onclick="openSignupDialog('header')" class="px-4 py-2 gradient-bg text-white rounded-lg hover:opacity-90 transition-opacity font-medium">
+                        Start free trial
+                    </button>
+                </div>
             </div>
-            <p class="text-sm text-gray-500">Keep an eye on your phone - we'll text you with updates!</p>
-            <a href="/" class="inline-block mt-6 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
-                Back to homepage
-            </a>
+        </nav>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden hero-gradient py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center animate-slide-up">
+                    <!-- Main Headline -->
+                    <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                        Never overpay for tickets again.
+                    </h1>
+                    
+                    <!-- Subheadline with key value props -->
+                    <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+                        Get instant SMS alerts when ticket prices drop or new seats become available. 
+                        Catch the 15% of tickets released at last-minute discounts and avoid paying 15% platform fees.
+                        Our alerts arrive 4-6 minutes faster than other platforms, giving you the edge on the best deals.
+                    </p>
+                    
+                    <!-- Trust Indicators -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
+                        <div class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">Save up to 70% on tickets</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">Join 500K+ smart ticket buyers</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">Beat the bots & scalpers</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button onclick="openSignupDialog('hero')" class="px-8 py-3 gradient-bg text-white rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity animate-pulse-soft">
+                            Start free trial
+                        </button>
+                        <button onclick="scrollToSection('how-it-works')" class="px-8 py-3 border-2 border-gray-300 text-gray-700 rounded-lg text-lg font-semibold hover:border-gray-400 transition-colors">
+                            See how it works
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-12">How it works</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 gradient-bg rounded-full flex items-center justify-center text-white animate-float">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Follow your favorites</h3>
+                        <p class="text-gray-600">Add artists, teams, or venues you want to track for ticket deals.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 gradient-bg rounded-full flex items-center justify-center text-white animate-float" style="animation-delay: 0.5s">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Set your thresholds</h3>
+                        <p class="text-gray-600">Choose your max price and preferred sections for each event.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 gradient-bg rounded-full flex items-center justify-center text-white animate-float" style="animation-delay: 1s">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Get instant alerts</h3>
+                        <p class="text-gray-600">Receive SMS alerts the moment prices drop or seats open up.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Market Stats Section -->
+        <section class="py-20 bg-gradient-to-r from-purple-50 to-pink-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-12">Why timing matters in the $85B ticketing market</h2>
+                <div class="grid md:grid-cols-4 gap-6 text-center">
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <p class="text-4xl font-bold gradient-text mb-2">15%</p>
+                        <p class="text-sm text-gray-600">of all tickets sold at last-minute discounts</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <p class="text-4xl font-bold gradient-text mb-2">70%</p>
+                        <p class="text-sm text-gray-600">of buyers prefer mobile ticket purchasing</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <p class="text-4xl font-bold gradient-text mb-2">$15+</p>
+                        <p class="text-sm text-gray-600">average fees per ticket on major platforms</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                        <p class="text-4xl font-bold gradient-text mb-2">78%</p>
+                        <p class="text-sm text-gray-600">more likely to buy with seat preview</p>
+                    </div>
+                </div>
+                <p class="text-center mt-8 text-gray-600 text-sm">
+                    Source: Industry analysis from Verified Market Research, Grand View Research, and Mordor Intelligence (2024-2025)
+                </p>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-12">Features that give you the edge</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="p-6 bg-white rounded-xl shadow-lg card-hover">
+                        <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center text-white mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Lightning-fast alerts</h3>
+                        <p class="text-gray-600">Get notified 4-6 minutes before other platforms detect price changes.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-xl shadow-lg card-hover">
+                        <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center text-white mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Track multiple events</h3>
+                        <p class="text-gray-600">Monitor unlimited artists, teams, and venues simultaneously.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-xl shadow-lg card-hover">
+                        <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center text-white mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Smart price tracking</h3>
+                        <p class="text-gray-600">Set custom price thresholds and only get alerts for deals that matter.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-xl shadow-lg card-hover">
+                        <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center text-white mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Last-minute deals</h3>
+                        <p class="text-gray-600">Catch premium seats released hours before showtime at fraction of original price.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-xl shadow-lg card-hover">
+                        <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center text-white mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Verified tickets only</h3>
+                        <p class="text-gray-600">All alerts are for legitimate tickets from trusted platforms only.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-xl shadow-lg card-hover">
+                        <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center text-white mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Direct SMS delivery</h3>
+                        <p class="text-gray-600">No app needed - alerts go straight to your phone via text message.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Proof Section -->
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-12">What our users are saying</h2>
+                
+                <!-- Testimonials Grid -->
+                <div class="grid md:grid-cols-3 gap-6 mb-12">
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <div class="flex mb-4">
+                            <span class="text-yellow-400">★★★★★</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">"Saved $400 on Taylor Swift tickets! The alert came through at 11pm and I grabbed floor seats for half the original price."</p>
+                        <p class="text-sm text-gray-500">- Sarah M., Los Angeles</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <div class="flex mb-4">
+                            <span class="text-yellow-400">★★★★★</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">"I've used this for every Lakers game this season. Never paid full price once. This app is a game changer!"</p>
+                        <p class="text-sm text-gray-500">- Mike T., San Francisco</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <div class="flex mb-4">
+                            <span class="text-yellow-400">★★★★★</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">"Got front row seats to Hamilton for 70% off. The SMS came 5 minutes before anyone else knew about it."</p>
+                        <p class="text-sm text-gray-500">- Jennifer K., New York</p>
+                    </div>
+                </div>
+
+                <!-- Recent Deals Feed -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4">Recent deals caught</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center py-3 border-b">
+                            <div>
+                                <span class="text-sm text-gray-500">2 mins ago</span>
+                                <p class="font-semibold">Drake - Madison Square Garden</p>
+                                <p class="text-sm text-gray-600">Section 102, Row 5</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-lg font-bold text-green-600">$125</p>
+                                <p class="text-sm text-gray-500 line-through">$450</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b">
+                            <div>
+                                <span class="text-sm text-gray-500">8 mins ago</span>
+                                <p class="font-semibold">Warriors vs Lakers</p>
+                                <p class="text-sm text-gray-600">Lower Bowl, Row 12</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-lg font-bold text-green-600">$89</p>
+                                <p class="text-sm text-gray-500 line-through">$275</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center py-3">
+                            <div>
+                                <span class="text-sm text-gray-500">15 mins ago</span>
+                                <p class="font-semibold">Olivia Rodrigo - The Forum</p>
+                                <p class="text-sm text-gray-600">GA Floor</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-lg font-bold text-green-600">$75</p>
+                                <p class="text-sm text-gray-500 line-through">$225</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-12">Simple, transparent pricing</h2>
+                
+                <!-- Pricing Toggle -->
+                <div class="flex justify-center mb-8">
+                    <div class="bg-gray-100 rounded-lg p-1">
+                        <button id="monthly-toggle" onclick="togglePricing('monthly')" class="px-4 py-2 rounded-md bg-white text-gray-900 font-medium transition-all">Monthly</button>
+                        <button id="yearly-toggle" onclick="togglePricing('yearly')" class="px-4 py-2 rounded-md text-gray-600 font-medium transition-all">Yearly</button>
+                    </div>
+                </div>
+
+                <!-- Pricing Card -->
+                <div class="bg-white rounded-2xl shadow-xl p-8">
+                    <div class="text-center mb-8">
+                        <div id="monthly-price" class="pricing-option">
+                            <p class="text-5xl font-bold">$7<span class="text-xl text-gray-500">/month</span></p>
+                        </div>
+                        <div id="yearly-price" class="pricing-option hidden">
+                            <p class="text-5xl font-bold">$59<span class="text-xl text-gray-500">/year</span></p>
+                            <p class="text-green-600 font-semibold mt-2">Save 30% with annual billing</p>
+                        </div>
+                    </div>
+
+                    <!-- Features List -->
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Unlimited SMS alerts</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Track unlimited events</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Custom price thresholds</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>4-6 minute advantage</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Cancel anytime</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Button -->
+                    <button onclick="openSignupDialog('pricing')" class="w-full px-8 py-3 gradient-bg text-white rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity">
+                        Start free trial
+                    </button>
+
+                    <!-- Guarantees -->
+                    <div class="mt-6 text-center">
+                        <p class="text-sm text-gray-500">✓ 30-day money-back guarantee</p>
+                        <p class="text-xs text-gray-400 mt-2">By signing up, you consent to receive SMS alerts. Message and data rates may apply.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20 bg-gray-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="bg-white rounded-lg shadow-md">
+                        <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">How fast are the alerts really?</summary>
+                        <div class="px-6 pb-4 text-gray-600">
+                            Our proprietary system checks ticket platforms every 30 seconds, detecting price changes 4-6 minutes before other alert services. This speed advantage is crucial for securing the best deals before they're gone.
+                        </div>
+                    </details>
+                    <details class="bg-white rounded-lg shadow-md">
+                        <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">Which ticket platforms do you monitor?</summary>
+                        <div class="px-6 pb-4 text-gray-600">
+                            We monitor all major ticket platforms including Ticketmaster, StubHub, Vivid Seats, SeatGeek, and 20+ other verified resellers. We only alert you to legitimate tickets from trusted sources.
+                        </div>
+                    </details>
+                    <details class="bg-white rounded-lg shadow-md">
+                        <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">Can I set different price alerts for different events?</summary>
+                        <div class="px-6 pb-4 text-gray-600">
+                            Yes! You can customize price thresholds for each artist, team, or venue you track. Set higher limits for must-see events and lower limits for casual interests.
+                        </div>
+                    </details>
+                    <details class="bg-white rounded-lg shadow-md">
+                        <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">What if I don't want alerts at certain times?</summary>
+                        <div class="px-6 pb-4 text-gray-600">
+                            You can set quiet hours in your account settings. We'll hold non-urgent alerts until your preferred time window. Exceptional deals (70%+ off) can optionally bypass quiet hours.
+                        </div>
+                    </details>
+                    <details class="bg-white rounded-lg shadow-md">
+                        <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">Is there really no commitment?</summary>
+                        <div class="px-6 pb-4 text-gray-600">
+                            Absolutely. Cancel anytime from your account settings with one click. No questions asked, no cancellation fees. Plus, we offer a 30-day money-back guarantee for new users.
+                        </div>
+                    </details>
+                    <details class="bg-white rounded-lg shadow-md">
+                        <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">How many alerts will I receive?</summary>
+                        <div class="px-6 pb-4 text-gray-600">
+                            It depends on your settings. Most users receive 3-5 relevant alerts per week. You control the frequency by adjusting your price thresholds and tracked events.
+                        </div>
+                    </details>
+                    <details class="bg-white rounded-lg shadow-md">
+                        <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">Do you sell my phone number?</summary>
+                        <div class="px-6 pb-4 text-gray-600">
+                            Never. Your phone number is used solely for sending you ticket alerts. We don't share, sell, or use your data for any other purpose. See our Privacy Policy for details.
+                        </div>
+                    </details>
+                    <details class="bg-white rounded-lg shadow-md">
+                        <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">What happens after my free trial?</summary>
+                        <div class="px-6 pb-4 text-gray-600">
+                            Your free trial lasts 7 days with full access to all features. After that, you'll be charged the plan you selected (monthly or yearly). You can cancel anytime during the trial without being charged.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-bold mb-6">Get instant alerts now</h2>
+                <p class="text-xl text-gray-600 mb-8">Join thousands saving up to 70% on tickets every day.</p>
+                <button onclick="openSignupDialog('final-cta')" class="px-8 py-3 gradient-bg text-white rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity animate-pulse-soft">
+                    Start free trial
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="text-2xl font-bold mb-4">TicketHawk</div>
+                    <p class="text-gray-400">Never overpay for tickets again.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="/terms" class="hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="/sms-terms" class="hover:text-white transition-colors">SMS Terms</a></li>
+                        <li><a href="/refunds" class="hover:text-white transition-colors">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/contact" class="hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="#faq" class="hover:text-white transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" aria-label="Facebook" class="text-gray-400 hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter" class="text-gray-400 hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 TicketHawk. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Signup Dialog Modal -->
+    <div id="signup-dialog" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="signup-dialog-title" aria-hidden="true" tabindex="-1">
+        <div class="bg-white rounded-xl p-8 max-w-md w-full">
+            <h3 id="signup-dialog-title" class="text-2xl font-bold mb-6">Start your free trial</h3>
+            <form id="signup-form" onsubmit="handleSignup(event)" novalidate>
+                <div class="mb-4">
+                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                    <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    <p id="name-error" class="mt-2 text-sm text-red-600 hidden" role="alert" aria-live="polite"></p>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                    <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    <p id="email-error" class="mt-2 text-sm text-red-600 hidden" role="alert" aria-live="polite"></p>
+                </div>
+                <div class="mb-4">
+                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="(555) 123-4567" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    <p id="phone-error" class="mt-2 text-sm text-red-600 hidden" role="alert" aria-live="polite"></p>
+                </div>
+                <div class="mb-6">
+                    <label class="flex items-start">
+                        <input type="checkbox" id="sms-consent" required class="mt-1 mr-2">
+                        <span class="text-sm text-gray-600">I consent to receive SMS alerts about ticket deals. Message and data rates may apply. You can unsubscribe at any time.</span>
+                    </label>
+                    <p id="sms-consent-error" class="mt-2 text-sm text-red-600 hidden" role="alert" aria-live="polite"></p>
+                </div>
+                <button type="submit" class="w-full px-6 py-3 gradient-bg text-white rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                    Start free trial
+                </button>
+                <button type="button" onclick="closeSignupDialog()" class="w-full mt-3 px-6 py-3 border border-gray-300 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+                    Cancel
+                </button>
+            </form>
         </div>
     </div>
+
+    <!-- Success Toast Notification -->
+    <div id="success-toast" class="fixed bottom-8 right-8 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg hidden z-50" role="status" aria-live="polite">
+        <div class="flex items-center">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span>Success! Check your phone for a welcome text.</span>
+        </div>
+    </div>
+
+    <!-- JSON-LD Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "name": "TicketHawk",
+                "url": "https://tickethawk.com",
+                "logo": "https://tickethawk.com/logo.png",
+                "description": "Instant SMS alerts for last-minute ticket price drops and new seat releases."
+            },
+            {
+                "@type": "SoftwareApplication",
+                "name": "TicketHawk",
+                "applicationCategory": "UtilitiesApplication",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "7.00",
+                    "priceCurrency": "USD"
+                },
+                "description": "Get instant SMS alerts when ticket prices drop or new seats become available."
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "How fast are the alerts really?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Our proprietary system checks ticket platforms every 30 seconds, detecting price changes 4-6 minutes before other alert services."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Which ticket platforms do you monitor?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "We monitor all major ticket platforms including Ticketmaster, StubHub, Vivid Seats, SeatGeek, and 20+ other verified resellers."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can I set different price alerts for different events?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes! You can customize price thresholds for each artist, team, or venue you track."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What if I don't want alerts at certain times?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "You can set quiet hours in your account settings. We'll hold non-urgent alerts until your preferred time window."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Is there really no commitment?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Absolutely. Cancel anytime from your account settings with one click. No questions asked, no cancellation fees."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How many alerts will I receive?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "It depends on your settings. Most users receive 3-5 relevant alerts per week."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Do you sell my phone number?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Never. Your phone number is used solely for sending you ticket alerts."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What happens after my free trial?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Your free trial lasts 7 days with full access to all features. After that, you'll be charged the plan you selected."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Wrap everything in an IIFE to avoid global scope pollution
+        (function() {
+            'use strict';
+            
+            // Global state management
+            var currentPlan = 'monthly';
+            var signupSource = '';
+            var previouslyFocusedElement = null;
+            var focusTrapHandler = null;
+            var focusableSelectors = [
+                'a[href]',
+                'button:not([disabled])',
+                'textarea:not([disabled])',
+                'input:not([disabled])',
+                'select:not([disabled])',
+                '[tabindex]:not([tabindex="-1"])'
+            ].join(',');
+
+            // Safe console logging with fallback
+            function safeLog(message, data) {
+                try {
+                    if (typeof console !== 'undefined' && console && console.log) {
+                        if (data) {
+                            console.log(message, data);
+                        } else {
+                            console.log(message);
+                        }
+                    }
+                } catch (e) {
+                    // Silently fail if console is not available
+                }
+            }
+
+            // Analytics tracking helper function with error handling
+            function trackEvent(eventName, metadata) {
+                try {
+                    metadata = metadata || {};
+                    safeLog('Analytics Event: ' + eventName, metadata);
+                    
+                    // In production, you would send this to your analytics service here
+                    // Example: if (window.gtag) { gtag('event', eventName, metadata); }
+                } catch (e) {
+                    safeLog('Error tracking event: ' + e.message);
+                }
+            }
+
+            // Smooth scroll to section with error handling
+            function scrollToSection(sectionId) {
+                try {
+                    trackEvent('see_how_it_works_click', { from: 'hero' });
+                    var element = document.getElementById(sectionId);
+                    if (element) {
+                        var headerOffset = 80; // Account for fixed header
+                        var elementPosition = element.getBoundingClientRect().top;
+                        var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                } catch (e) {
+                    // Fallback for older browsers that don't support smooth scrolling
+                    var element = document.getElementById(sectionId);
+                    if (element) {
+                        element.scrollIntoView();
+                    }
+                }
+            }
+
+            // Toggle between monthly and yearly pricing
+            function togglePricing(plan) {
+                try {
+                    currentPlan = plan;
+                    trackEvent('pricing_toggle_change', { plan: plan });
+                    
+                    var monthlyBtn = document.getElementById('monthly-toggle');
+                    var yearlyBtn = document.getElementById('yearly-toggle');
+                    var monthlyPrice = document.getElementById('monthly-price');
+                    var yearlyPrice = document.getElementById('yearly-price');
+                    
+                    if (!monthlyBtn || !yearlyBtn || !monthlyPrice || !yearlyPrice) {
+                        safeLog('Pricing elements not found');
+                        return;
+                    }
+
+                    var activeBtnClasses = ['bg-white', 'text-gray-900'];
+                    var inactiveBtnClasses = ['bg-transparent', 'text-gray-600'];
+
+                    function setButtonState(button, isActive) {
+                        if (!button || !button.classList) {
+                            return;
+                        }
+                        var classesToRemove = activeBtnClasses.concat(inactiveBtnClasses);
+                        classesToRemove.forEach(function(className) {
+                            button.classList.remove(className);
+                        });
+
+                        var classesToAdd = isActive ? activeBtnClasses : inactiveBtnClasses;
+                        classesToAdd.forEach(function(className) {
+                            button.classList.add(className);
+                        });
+                    }
+
+                    var showMonthly = plan === 'monthly';
+
+                    setButtonState(monthlyBtn, showMonthly);
+                    setButtonState(yearlyBtn, !showMonthly);
+
+                    monthlyPrice.classList.toggle('hidden', !showMonthly);
+                    yearlyPrice.classList.toggle('hidden', showMonthly);
+                } catch (e) {
+                    safeLog('Error toggling pricing: ' + e.message);
+                }
+            }
+
+            function getFocusableElements(container) {
+                if (!container) {
+                    return [];
+                }
+                return Array.prototype.slice.call(
+                    container.querySelectorAll(focusableSelectors)
+                ).filter(function(element) {
+                    return element.offsetParent !== null && !element.hasAttribute('disabled') && element.tabIndex !== -1;
+                });
+            }
+
+            function enableFocusTrap(dialog) {
+                if (!dialog) {
+                    return;
+                }
+
+                function trapFocus(event) {
+                    if (event.key !== 'Tab' && event.keyCode !== 9) {
+                        return;
+                    }
+
+                    var focusableElements = getFocusableElements(dialog);
+                    if (!focusableElements.length) {
+                        return;
+                    }
+
+                    var firstElement = focusableElements[0];
+                    var lastElement = focusableElements[focusableElements.length - 1];
+                    var isShiftPressed = event.shiftKey;
+                    var activeElement = document.activeElement;
+
+                    if (!isShiftPressed && activeElement === lastElement) {
+                        event.preventDefault();
+                        firstElement.focus();
+                    } else if (isShiftPressed && activeElement === firstElement) {
+                        event.preventDefault();
+                        lastElement.focus();
+                    }
+                }
+
+                focusTrapHandler = trapFocus;
+                dialog.addEventListener('keydown', focusTrapHandler);
+            }
+
+            function disableFocusTrap(dialog) {
+                if (!dialog || !focusTrapHandler) {
+                    return;
+                }
+
+                dialog.removeEventListener('keydown', focusTrapHandler);
+                focusTrapHandler = null;
+            }
+
+            // Form validation helpers
+            var formFieldIds = ['name', 'email', 'phone', 'sms-consent'];
+
+            function getField(fieldId) {
+                return document.getElementById(fieldId);
+            }
+
+            function getFieldErrorElement(fieldId) {
+                return document.getElementById(fieldId + '-error');
+            }
+
+            function addDescribedBy(field, errorElement) {
+                if (!field || !errorElement) {
+                    return;
+                }
+
+                var describedBy = field.getAttribute('aria-describedby') || '';
+                var tokens = describedBy.split(' ').filter(Boolean);
+                if (tokens.indexOf(errorElement.id) === -1) {
+                    tokens.push(errorElement.id);
+                    field.setAttribute('aria-describedby', tokens.join(' '));
+                }
+            }
+
+            function removeDescribedBy(field, errorElement) {
+                if (!field) {
+                    return;
+                }
+
+                if (!errorElement) {
+                    field.removeAttribute('aria-describedby');
+                    return;
+                }
+
+                var describedBy = field.getAttribute('aria-describedby') || '';
+                var tokens = describedBy.split(' ').filter(Boolean);
+                var filteredTokens = tokens.filter(function(token) {
+                    return token !== errorElement.id;
+                });
+
+                if (filteredTokens.length) {
+                    field.setAttribute('aria-describedby', filteredTokens.join(' '));
+                } else {
+                    field.removeAttribute('aria-describedby');
+                }
+            }
+
+            function showFieldError(fieldId, message) {
+                var field = getField(fieldId);
+                var errorElement = getFieldErrorElement(fieldId);
+
+                if (!errorElement) {
+                    return;
+                }
+
+                errorElement.textContent = message;
+                errorElement.classList.remove('hidden');
+
+                if (field) {
+                    field.setAttribute('aria-invalid', 'true');
+                    addDescribedBy(field, errorElement);
+                }
+            }
+
+            function clearFieldError(fieldId) {
+                var field = getField(fieldId);
+                var errorElement = getFieldErrorElement(fieldId);
+
+                if (errorElement) {
+                    errorElement.textContent = '';
+                    errorElement.classList.add('hidden');
+                }
+
+                if (field) {
+                    field.removeAttribute('aria-invalid');
+                    removeDescribedBy(field, errorElement);
+                }
+            }
+
+            function validateField(fieldId) {
+                var field = getField(fieldId);
+                if (!field) {
+                    return true;
+                }
+
+                clearFieldError(fieldId);
+
+                if (fieldId === 'name') {
+                    var nameValue = field.value ? field.value.trim() : '';
+                    if (!nameValue) {
+                        showFieldError(fieldId, 'Please enter your name.');
+                        return false;
+                    }
+                } else if (fieldId === 'email') {
+                    var emailValue = field.value ? field.value.trim() : '';
+                    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailValue) {
+                        showFieldError(fieldId, 'Please enter your email address.');
+                        return false;
+                    }
+                    if (!emailPattern.test(emailValue)) {
+                        showFieldError(fieldId, 'That email address looks invalid. Try again?');
+                        return false;
+                    }
+                } else if (fieldId === 'phone') {
+                    var phoneValue = field.value ? field.value.trim() : '';
+                    var numericPhone = phoneValue.replace(/\D/g, '');
+                    if (!phoneValue) {
+                        showFieldError(fieldId, 'Please enter your phone number.');
+                        return false;
+                    }
+                    if (numericPhone.length < 10) {
+                        showFieldError(fieldId, 'Enter a valid phone number with at least 10 digits.');
+                        return false;
+                    }
+                } else if (fieldId === 'sms-consent') {
+                    var consentChecked = field.checked;
+                    if (!consentChecked) {
+                        showFieldError(fieldId, 'We need your consent to send SMS alerts.');
+                        return false;
+                    }
+                }
+
+                return true;
+            }
+
+            function validateForm() {
+                var isValid = true;
+                var firstInvalidField = null;
+
+                for (var i = 0; i < formFieldIds.length; i++) {
+                    var fieldId = formFieldIds[i];
+                    var fieldIsValid = validateField(fieldId);
+                    if (!fieldIsValid) {
+                        isValid = false;
+                        if (!firstInvalidField) {
+                            firstInvalidField = getField(fieldId);
+                        }
+                    }
+                }
+
+                if (!isValid && firstInvalidField && firstInvalidField.focus) {
+                    firstInvalidField.focus();
+                }
+
+                return isValid;
+            }
+
+            function handleRealtimeValidation(event) {
+                if (!event || !event.target) {
+                    return;
+                }
+
+                var fieldId = event.target.id;
+                if (formFieldIds.indexOf(fieldId) === -1) {
+                    return;
+                }
+
+                // Validate as the user updates the field
+                validateField(fieldId);
+            }
+
+            // Open signup dialog modal
+            function openSignupDialog(source) {
+                try {
+                    signupSource = source;
+                    
+                    // Track different CTAs
+                    if (source === 'hero') {
+                        trackEvent('hero_cta_click', { section: 'hero' });
+                    } else if (source === 'pricing') {
+                        trackEvent('start_trial_click', { section: 'pricing', plan: currentPlan });
+                    } else if (source === 'final-cta') {
+                        trackEvent('start_trial_click', { section: 'final-cta' });
+                    } else if (source === 'header') {
+                        trackEvent('start_trial_click', { section: 'header' });
+                    }
+                    
+                    // Show dialog with fade-in effect
+                    var dialog = document.getElementById('signup-dialog');
+                    if (dialog) {
+                        previouslyFocusedElement = document.activeElement;
+                        dialog.classList.remove('hidden');
+                        dialog.classList.add('flex');
+                        dialog.setAttribute('aria-hidden', 'false');
+
+                        var formElement = document.getElementById('signup-form');
+                        if (formElement && formElement.reset) {
+                            formElement.reset();
+                        }
+                        formFieldIds.forEach(function(fieldId) {
+                            clearFieldError(fieldId);
+                        });
+
+                        enableFocusTrap(dialog);
+
+                        // Focus the first focusable element inside the dialog
+                        var focusableElements = getFocusableElements(dialog);
+                        if (focusableElements.length) {
+                            focusableElements[0].focus();
+                        } else {
+                            dialog.focus();
+                        }
+                    }
+                } catch (e) {
+                    safeLog('Error opening dialog: ' + e.message);
+                }
+            }
+
+            // Close signup dialog modal
+            function closeSignupDialog() {
+                try {
+                    var dialog = document.getElementById('signup-dialog');
+                    if (dialog) {
+                        disableFocusTrap(dialog);
+                        dialog.classList.remove('flex');
+                        dialog.classList.add('hidden');
+                        dialog.setAttribute('aria-hidden', 'true');
+                    }
+
+                    if (previouslyFocusedElement && previouslyFocusedElement.focus) {
+                        previouslyFocusedElement.focus();
+                        previouslyFocusedElement = null;
+                    }
+                } catch (e) {
+                    safeLog('Error closing dialog: ' + e.message);
+                }
+            }
+
+            // Handle form submission
+            function handleSignup(event) {
+                try {
+                    event.preventDefault();
+                    var formElement = event.target;
+
+                    if (!validateForm()) {
+                        trackEvent('form_validation_failed', { section: signupSource, plan: currentPlan });
+                        return;
+                    }
+                    
+                    // Collect form data
+                    var formData = {
+                        name: document.getElementById('name').value,
+                        email: document.getElementById('email').value,
+                        phone: document.getElementById('phone').value,
+                        smsConsent: document.getElementById('sms-consent').checked,
+                        plan: currentPlan,
+                        source: signupSource,
+                        timestamp: new Date().toISOString()
+                    };
+                    
+                    // Log to console (in production, this would POST to your API)
+                    safeLog('Signup Form Submission:', formData);
+                    trackEvent('form_submit', { 
+                        section: signupSource, 
+                        plan: currentPlan 
+                    });
+                    
+                    // Close dialog
+                    closeSignupDialog();
+                    
+                    // Show success toast
+                    showSuccessToast();
+                    
+                    // Reset form for next use
+                    if (formElement && formElement.reset) {
+                        formElement.reset();
+                    }
+                    formFieldIds.forEach(function(fieldId) {
+                        clearFieldError(fieldId);
+                    });
+                } catch (e) {
+                    safeLog('Error handling signup: ' + e.message);
+                }
+            }
+
+            // Show success toast notification
+            function showSuccessToast() {
+                try {
+                    var toast = document.getElementById('success-toast');
+                    if (toast) {
+                        toast.className = toast.className.replace('hidden', '');
+                        
+                        // Auto-hide after 5 seconds
+                        setTimeout(function() {
+                            if (toast) {
+                                toast.className += ' hidden';
+                            }
+                        }, 5000);
+                    }
+                } catch (e) {
+                    safeLog('Error showing toast: ' + e.message);
+                }
+            }
+
+            // Make functions globally available
+            window.scrollToSection = scrollToSection;
+            window.togglePricing = togglePricing;
+            window.openSignupDialog = openSignupDialog;
+            window.closeSignupDialog = closeSignupDialog;
+            window.handleSignup = handleSignup;
+
+            // Initialize page when DOM is ready
+            function initializePage() {
+                try {
+                    // Track page view
+                    trackEvent('page_view', { page: 'landing' });
+                    
+                    // Add smooth scroll behavior to all anchor links
+                    var anchors = document.querySelectorAll('a[href^="#"]');
+                    for (var i = 0; i < anchors.length; i++) {
+                        anchors[i].addEventListener('click', function(e) {
+                            e.preventDefault();
+                            var targetId = this.getAttribute('href').substring(1);
+                            if (targetId) {
+                                scrollToSection(targetId);
+                            }
+                        });
+                    }
+                    
+                    // Close dialog when clicking outside (on backdrop)
+                    var dialog = document.getElementById('signup-dialog');
+                    if (dialog) {
+                        dialog.addEventListener('click', function(e) {
+                            if (e.target === this) {
+                                closeSignupDialog();
+                            }
+                        });
+                    }
+                    
+                    var signupForm = document.getElementById('signup-form');
+                    if (signupForm) {
+                        signupForm.addEventListener('input', handleRealtimeValidation);
+                        signupForm.addEventListener('change', handleRealtimeValidation);
+                    }
+                    
+                    // Handle escape key to close dialog
+                    document.addEventListener('keydown', function(e) {
+                        var dialogElement = document.getElementById('signup-dialog');
+                        var isDialogOpen = dialogElement && dialogElement.classList && dialogElement.classList.contains('flex') && !dialogElement.classList.contains('hidden');
+                        
+                        if (isDialogOpen && (e.key === 'Escape' || e.keyCode === 27)) {
+                            closeSignupDialog();
+                        }
+                    });
+                    
+                } catch (e) {
+                    safeLog('Error initializing page: ' + e.message);
+                }
+            }
+
+            // Wait for DOM to be ready
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initializePage);
+            } else {
+                // DOM is already ready
+                initializePage();
+            }
+            
+        })();
+    </script>
 </body>
 </html>
