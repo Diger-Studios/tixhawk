@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Build artifacts
+package-lock.json
+
+# Temporary files
+*.log
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
