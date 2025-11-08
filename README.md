@@ -79,29 +79,36 @@ Deployed on Netlify. Push to main branch triggers automatic deployment.
 Build command: `npm run build`
 Publish directory: `.` (root)
 
-## 📊 Analytics
+## 📊 Analytics & Configuration
 
-- **Google Analytics**: G-ZMTC6B64CY
-- **Facebook Pixel**: 1425830958537813
+Analytics tracking IDs and sensitive configuration are stored in the HTML files and deployment environment.
 
-## 🔒 Environment
+**For internal team reference:**
+- See `index.html` for analytics integration
+- Contact admin for access to analytics dashboards
 
-- Domain: https://tixhawk.com
-- Hosting: Netlify
-- Form Handler: Netlify Forms
-- CDN: ImageKit for videos
+## 🔒 Tech Stack
+
+- **Domain**: https://tixhawk.com
+- **Hosting**: Netlify
+- **Form Handler**: Netlify Forms
+- **CDN**: ImageKit (videos)
+- **CSS Framework**: Tailwind CSS 3.4.10
+- **Analytics**: Google Analytics, Facebook Pixel
 
 ## ⚠️ Important Notes
 
-1. **Branding**: Always use "TicketHawk" in user-facing content (see BRANDING.md)
-2. **CSS**: Don't edit styles.css directly - use src/input.css
-3. **Videos**: Stored on ImageKit CDN, not in repo (see media_assets/ for local copies)
-4. **OG Image**: Regenerate if branding/tagline changes
+1. **Security**: This is a public repo - see [SECURITY.md](./SECURITY.md) for what not to commit
+2. **Branding**: Always use "TicketHawk" in user-facing content (see BRANDING.md)
+3. **CSS**: Don't edit styles.css directly - use src/input.css
+4. **Videos**: Stored on ImageKit CDN, not in repo (see media_assets/ for local copies)
+5. **OG Image**: Regenerate if branding/tagline changes
 
 ## 📞 Contact
 
-- Partners: partners@tixhawk.com
-- Company: Diger Studios LLC
+For partnership inquiries, visit https://tixhawk.com
+
+Built by [Diger Studios LLC](https://digerstudios.com)
 
 ---
 

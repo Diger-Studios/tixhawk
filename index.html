@@ -106,6 +106,11 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="./media_assets/fav.png" />
 
+  <!-- Resource Hints for Performance -->
+  <link rel="preconnect" href="https://ik.imagekit.io" crossorigin />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+  <link rel="dns-prefetch" href="https://connect.facebook.net" />
+
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://tixhawk.com/" />
@@ -217,7 +222,8 @@
               class="hidden md:block w-full max-w-xl ml-auto rounded-xl shadow-lg"
               src="https://ik.imagekit.io/a7qtjln8c/Video_Creation_for_TicketHawk_Persona.mp4?updatedAt=1754778779361"
               controls
-              preload="auto"
+              preload="metadata"
+              loading="lazy"
               autoplay
               muted
               loop
@@ -232,7 +238,8 @@
               class="block md:hidden w-full max-w-sm mx-auto rounded-xl shadow-lg mt-6"
               src="https://ik.imagekit.io/a7qtjln8c/Vertical_Video_Generation_for_Mobile.mp4?updatedAt=1754778635311"
               controls
-              preload="auto"
+              preload="metadata"
+              loading="lazy"
               autoplay
               muted
               loop
@@ -438,36 +445,35 @@
           <details class="bg-white rounded-lg shadow-md">
             <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">How fast are the ticket alerts really?</summary>
             <div class="px-6 pb-4 text-gray-600">
-              <p>TixHawk's proprietary system checks ticket platforms every 30 seconds, detecting price changes 4–6 minutes before other alert services. This speed advantage is crucial for securing the best deals before they're gone. When you ask "How fast are ticket alerts?", the answer is: faster than any other service available.</p>
-              <p class="mt-3 text-sm text-gray-500">Our real-time monitoring means you get notified the moment prices drop, giving you the best chance to secure tickets at face value or below.</p>
+              <p>Our system checks ticket platforms every 30 seconds, detecting price changes 4–6 minutes before other alert services. This speed advantage is crucial for securing the best deals before they're gone.</p>
+              <p class="mt-3 text-sm text-gray-500">You get notified the moment prices drop, giving you the best chance to secure tickets at face value or below.</p>
             </div>
           </details>
           <details class="bg-white rounded-lg shadow-md">
-            <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">Which ticket platforms do you monitor for last-minute deals?</summary>
+            <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">Which ticket platforms do you monitor?</summary>
             <div class="px-6 pb-4 text-gray-600">
-              <p>TixHawk monitors all major ticket platforms including Ticketmaster, StubHub, Vivid Seats, SeatGeek, and 20+ other verified resellers. We only alert you to legitimate tickets from trusted sources.</p>
-              <p class="mt-3 text-sm text-gray-500">Whether you're looking for concert tickets, sports tickets, or theater tickets, our comprehensive monitoring ensures you don't miss any last-minute availability drops across all major platforms.</p>
+              <p>We monitor all major platforms including Ticketmaster, StubHub, Vivid Seats, SeatGeek, and 20+ other verified resellers. You'll only receive alerts for legitimate tickets from trusted sources.</p>
+              <p class="mt-3 text-sm text-gray-500">Our comprehensive monitoring covers concerts, sports, and theater events across all major platforms.</p>
             </div>
           </details>
           <details class="bg-white rounded-lg shadow-md">
-            <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">Can I set different price alerts for different events and concerts?</summary>
+            <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">Can I set different price alerts for different events?</summary>
             <div class="px-6 pb-4 text-gray-600">
-              <p>Yes! You can customize price thresholds for each artist, team, or venue you track. Set higher limits for must‑see events and lower limits for casual interests. This personalized approach ensures you only get alerts for tickets you actually want to buy.</p>
-              <p class="mt-3 text-sm text-gray-500">For example, you might set a $200 limit for your favorite band's concert but only $50 for a casual sports game. TixHawk respects your budget preferences.</p>
+              <p>Yes! Customize price thresholds for each artist, team, or venue you track. Set higher limits for must‑see events and lower limits for casual interests.</p>
+              <p class="mt-3 text-sm text-gray-500">For example, set a $200 limit for your favorite band's concert but only $50 for a casual sports game.</p>
             </div>
           </details>
           <details class="bg-white rounded-lg shadow-md">
-            <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">What if I don't want ticket alerts at certain times of day?</summary>
+            <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">Can I control when I receive alerts?</summary>
             <div class="px-6 pb-4 text-gray-600">
-              <p>You can set quiet hours in your account settings. We'll hold non‑urgent alerts until your preferred time window. Exceptional deals (70%+ off) can optionally bypass quiet hours so you never miss truly amazing opportunities.</p>
-              <p class="mt-3 text-sm text-gray-500">This feature is perfect for people who don't want to be woken up by alerts but still want to catch incredible last-minute deals during business hours.</p>
+              <p>Yes! Set quiet hours in your account settings. We'll hold non‑urgent alerts until your preferred time window. Exceptional deals (70%+ off) can optionally bypass quiet hours.</p>
+              <p class="mt-3 text-sm text-gray-500">Perfect for avoiding late-night alerts while still catching amazing deals during the day.</p>
             </div>
           </details>
           <details class="bg-white rounded-lg shadow-md">
-            <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">Is there really no commitment with TixHawk?</summary>
+            <summary class="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-50 transition-colors">Is there a commitment or contract?</summary>
             <div class="px-6 pb-4 text-gray-600">
-              <p>Absolutely. Cancel anytime from your account settings with one click. No questions asked, no cancellation fees. Plus, we offer a 30‑day money‑back guarantee for new users.</p>
-              <p class="mt-3 text-sm text-gray-500">We're confident you'll love TixHawk's ticket alert service, but if you're not satisfied, you can cancel your subscription anytime without any penalties or hidden fees.</p>
+              <p>No commitment. Cancel anytime with one click—no questions asked, no cancellation fees. Plus, we offer a 30‑day money‑back guarantee for new users.</p>
             </div>
           </details>
           <details class="bg-white rounded-lg shadow-md">
@@ -608,6 +614,16 @@
         try {
           metadata = metadata || {};
           safeLog('Analytics Event:', eventName, metadata);
+
+          // Send to Google Analytics if available
+          if (typeof gtag !== 'undefined') {
+            gtag('event', eventName, metadata);
+          }
+
+          // Send to Facebook Pixel if available
+          if (typeof fbq !== 'undefined') {
+            fbq('trackCustom', eventName, metadata);
+          }
         } catch (_) {}
       }
 
@@ -772,6 +788,71 @@
       document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeSignupDialog(); });
       var dlg = document.getElementById('signup-dialog');
       if (dlg) dlg.addEventListener('click', function(e){ if (e.target === dlg) closeSignupDialog(); });
+
+      // Enhanced Conversion Tracking
+
+      // Track video interactions
+      function trackVideoEvent(videoId, action) {
+        trackEvent('video_' + action, { video_id: videoId, location: 'hero' });
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        // Track video plays
+        var desktopVideo = document.getElementById('hero-video-desktop');
+        var mobileVideo = document.getElementById('hero-video-mobile');
+
+        if (desktopVideo) {
+          desktopVideo.addEventListener('play', function() { trackVideoEvent('desktop', 'play'); }, { once: true });
+        }
+        if (mobileVideo) {
+          mobileVideo.addEventListener('play', function() { trackVideoEvent('mobile', 'play'); }, { once: true });
+        }
+
+        // Track FAQ interactions
+        var faqDetails = document.querySelectorAll('#faq details');
+        faqDetails.forEach(function(detail) {
+          detail.addEventListener('toggle', function() {
+            if (detail.open) {
+              var question = detail.querySelector('summary').textContent.trim();
+              trackEvent('faq_open', { question: question });
+            }
+          }, { once: true });
+        });
+
+        // Track scroll depth
+        var scrollDepths = [25, 50, 75, 100];
+        var scrollTracked = {};
+
+        window.addEventListener('scroll', function() {
+          var scrollPercent = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+
+          scrollDepths.forEach(function(depth) {
+            if (scrollPercent >= depth && !scrollTracked[depth]) {
+              scrollTracked[depth] = true;
+              trackEvent('scroll_depth', { depth: depth + '%' });
+            }
+          });
+        });
+
+        // Track navigation clicks
+        var navLinks = document.querySelectorAll('nav a, header a');
+        navLinks.forEach(function(link) {
+          link.addEventListener('click', function() {
+            trackEvent('navigation_click', {
+              link_text: link.textContent.trim(),
+              link_href: link.getAttribute('href')
+            });
+          });
+        });
+
+        // Track partner email clicks
+        var partnerEmail = document.querySelector('a[href^="mailto:partners"]');
+        if (partnerEmail) {
+          partnerEmail.addEventListener('click', function() {
+            trackEvent('partner_inquiry', { method: 'email' });
+          });
+        }
+      });
     })();
   </script>
 </body>
