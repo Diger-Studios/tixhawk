@@ -204,25 +204,42 @@
 
   <main id="main-content" class="pt-20" role="main">
     <!-- Hero -->
-    <section class="py-16" aria-labelledby="hero-heading">
+    <section class="py-8 md:py-16" aria-labelledby="hero-heading">
       <div class="max-w-7xl mx-auto px-4">
         <div class="grid md:grid-cols-2 gap-10 items-center">
           <!-- Left: Copy + CTAs -->
           <div class="text-center md:text-left md:max-w-xl">
-            <div class="inline-block bg-purple-100 text-purple-800 px-4 py-1 rounded-full text-sm font-semibold mb-3" role="status" aria-label="Limited offer">🚀 Early Access · 100 spots</div>
-            <h1 id="hero-heading" class="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight text-gray-900 mb-3">Get Instant Alerts When Last-Minute Tickets Become Available</h1>
-            <p class="text-sm md:text-base font-semibold gradient-text mb-4">Beat the Bots, Not Your Budget</p>
-            <p class="text-base md:text-lg text-gray-600 mb-5">Get instant SMS alerts when prices drop or new seats open up — faster than resellers and bots. Perfect for concert tickets, sports events, and theater shows.</p>
+            <div class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold mb-2" role="status" aria-label="Limited offer">🚀 Early Access · 100 spots</div>
+            <h1 id="hero-heading" class="text-3xl sm:text-5xl md:text-6xl font-bold leading-tight gradient-text mb-2">Beat the Bots, Not Your Budget</h1>
+            <p class="text-base sm:text-xl md:text-2xl text-gray-700 mb-3 md:mb-5">Get instant SMS alerts when last-minute tickets drop — faster than resellers and bots. Perfect for concerts, sports & theater.</p>
 
             <!-- Compact badges instead of large cards -->
-            <div class="flex flex-wrap gap-2 mb-6" role="list" aria-label="Key benefits">
+            <div class="flex flex-wrap gap-2 mb-3 md:mb-6" role="list" aria-label="Key benefits">
               <span class="inline-flex items-center gap-2 bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold" role="listitem">🎁 7‑day free launch bonus</span>
               <span class="inline-flex items-center gap-2 bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold" role="listitem">🛡️ Anti‑scalper for real fans</span>
             </div>
 
-            <div class="flex flex-col sm:flex-row gap-4 md:justify-start justify-center">
-              <button onclick="openSignupDialog('hero')" class="px-6 sm:px-8 py-3 gradient-bg text-white rounded-lg text-base sm:text-lg font-semibold hover:opacity-90 touch-manipulation transition-opacity" aria-label="Join the waitlist for early access">Join the waitlist</button>
-              <button onclick="scrollToSection('how-it-works')" class="px-6 sm:px-8 py-3 border-2 border-gray-300 text-gray-700 rounded-lg text-base sm:text-lg font-semibold hover:border-gray-400 touch-manipulation transition-colors" aria-label="Learn how TicketHawk works">See how it works</button>
+            <div class="flex flex-col sm:flex-row gap-3 md:gap-4 md:justify-start justify-center mb-4 md:mb-6">
+              <button onclick="openSignupDialog('hero')" class="px-6 sm:px-8 py-2.5 sm:py-3 gradient-bg text-white rounded-lg text-base sm:text-lg font-semibold hover:opacity-90 touch-manipulation transition-opacity" aria-label="Join the waitlist for early access">Join the waitlist</button>
+              <button onclick="scrollToSection('how-it-works')" class="px-6 sm:px-8 py-2.5 sm:py-3 border-2 border-gray-300 text-gray-700 rounded-lg text-base sm:text-lg font-semibold hover:border-gray-400 touch-manipulation transition-colors" aria-label="Learn how TicketHawk works">See how it works</button>
+            </div>
+
+            <!-- Platform Trust Indicators -->
+            <div class="text-center md:text-left">
+              <p class="text-xs text-gray-500 mb-2">Monitoring tickets from:</p>
+              <div class="flex flex-wrap justify-center md:justify-start gap-3 text-sm font-semibold text-gray-600">
+                <span>Ticketmaster</span>
+                <span class="text-gray-300">•</span>
+                <span>StubHub</span>
+                <span class="text-gray-300">•</span>
+                <span>SeatGeek</span>
+                <span class="text-gray-300">•</span>
+                <span>AXS</span>
+                <span class="text-gray-300">•</span>
+                <span>Vivid Seats</span>
+                <span class="text-gray-300">•</span>
+                <span class="text-purple-600">20+ more</span>
+              </div>
             </div>
           </div>
 
@@ -366,8 +383,8 @@
           </div>
         </div>
 
-        <!-- Early Access Interest Counter (Hidden until 50+ signups) -->
-        <div class="bg-white rounded-xl shadow-lg p-6 hidden">
+        <!-- Early Access Interest Counter -->
+        <div class="bg-white rounded-xl shadow-lg p-6">
           <h3 class="text-xl font-semibold mb-4 text-center">Early Access Interest</h3>
           <div class="text-center">
             <div class="text-4xl font-bold gradient-text mb-2">47</div>
@@ -592,20 +609,6 @@
         <p class="hidden"><label>Don’t fill this out if you're human: <input name="bot-field" /></label></p>
 
         <div class="mb-4">
-          <label for="name" class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            minlength="2"
-            maxlength="50"
-            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition-colors"
-            aria-required="true"
-            aria-describedby="name-error" />
-          <p id="name-error" class="text-xs text-red-600 mt-1 hidden" role="alert"></p>
-        </div>
-        <div class="mb-4">
           <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
           <input
             type="email"
@@ -618,7 +621,7 @@
           <p id="email-error" class="text-xs text-red-600 mt-1 hidden" role="alert"></p>
         </div>
         <div class="mb-4">
-          <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+          <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number (for SMS alerts)</label>
           <input
             type="tel"
             id="phone"
@@ -749,19 +752,8 @@
 
       // Real-time validation
       document.addEventListener('DOMContentLoaded', function() {
-        var nameField = document.getElementById('name');
         var emailField = document.getElementById('email');
         var phoneField = document.getElementById('phone');
-
-        if (nameField) {
-          nameField.addEventListener('blur', function() {
-            if (this.value.trim().length < 2) {
-              showFieldError('name', 'Please enter your first name (at least 2 characters)');
-            } else {
-              clearFieldError('name');
-            }
-          });
-        }
 
         if (emailField) {
           emailField.addEventListener('blur', function() {
@@ -806,21 +798,13 @@
           event.preventDefault();
 
           // Validate form before submission
-          var nameValue = document.getElementById('name').value.trim();
           var emailValue = document.getElementById('email').value.trim();
           var phoneValue = document.getElementById('phone').value.trim();
           var hasErrors = false;
 
           // Clear previous errors
-          clearFieldError('name');
           clearFieldError('email');
           clearFieldError('phone');
-
-          // Validate name
-          if (nameValue.length < 2) {
-            showFieldError('name', 'Please enter your first name (at least 2 characters)');
-            hasErrors = true;
-          }
 
           // Validate email
           if (!validateEmail(emailValue)) {
@@ -853,7 +837,6 @@
 
           var payload = {
             'form-name': 'waitlist',
-            name: document.getElementById('name').value,
             email: document.getElementById('email').value,
             phone: document.getElementById('phone').value,
             smsConsent: document.getElementById('sms-consent').checked ? 'yes' : 'no',
