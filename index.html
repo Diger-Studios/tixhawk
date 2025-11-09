@@ -125,16 +125,16 @@
   <meta property="twitter:description" content="Never miss sold-out concerts again. TixHawk sends instant alerts when last-minute tickets drop. Track availability for concerts, sports & events. No hidden fees." />
   <meta property="twitter:image" content="https://tixhawk.com/og-image.png" />
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) - Deferred for performance -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMTC6B64CY"></script>
-  <script>
+  <script defer>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);} gtag('js', new Date());
     gtag('config', 'G-ZMTC6B64CY');
   </script>
 
-  <!-- Meta Pixel Code -->
-  <script>
+  <!-- Meta Pixel Code - Deferred for performance -->
+  <script defer>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -151,9 +151,17 @@
   /></noscript>
   <!-- End Meta Pixel Code -->
 
-  <link rel="stylesheet" href="./styles.css" />
+  <!-- Async CSS loading to prevent render blocking -->
+  <link rel="preload" href="./styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="./styles.css" /></noscript>
+
+  <!-- Critical inline CSS -->
   <style>
     html { scroll-behavior: smooth; }
+    /* Prevent flash of unstyled content */
+    body { min-height: 100vh; }
+    .gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
   </style>
 </head>
 <body class="min-h-screen">
@@ -250,9 +258,10 @@
               id="hero-video-desktop"
               class="hidden md:block w-full max-w-xl ml-auto rounded-xl shadow-lg"
               src="https://ik.imagekit.io/a7qtjln8c/Video_Creation_for_TicketHawk_Persona.mp4?updatedAt=1754778779361"
+              width="672"
+              height="378"
               controls
-              preload="metadata"
-              loading="lazy"
+              preload="auto"
               autoplay
               muted
               loop
@@ -266,9 +275,10 @@
               id="hero-video-mobile"
               class="block md:hidden w-full max-w-sm mx-auto rounded-xl shadow-lg mt-6"
               src="https://ik.imagekit.io/a7qtjln8c/Vertical_Video_Generation_for_Mobile.mp4?updatedAt=1754778635311"
+              width="384"
+              height="682"
               controls
-              preload="metadata"
-              loading="lazy"
+              preload="auto"
               autoplay
               muted
               loop
