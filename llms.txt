@@ -1,0 +1,32 @@
+# TixHawk
+
+> Last-minute concert and event ticket alerts.
+
+TixHawk is a ticket alert service that monitors sold-out events and sends instant notifications when tickets become available.
+
+## What It Does
+
+- Monitors ticket availability for sold-out events
+- Sends real-time alerts when tickets drop
+- Tracks concerts, sports, theater, and other events
+- No hidden fees - $7/month flat rate
+
+## Use Cases
+
+- Finding last-minute concert tickets
+- Getting alerts for sold-out sports games
+- Tracking ticket availability for popular shows
+- Never missing your favorite artists
+
+## Pricing
+
+$7/month for unlimited event tracking
+
+## Company
+
+Built by Diger Studios
+https://digerstudios.com
+
+## Links
+
+Website: https://tixhawk.com
