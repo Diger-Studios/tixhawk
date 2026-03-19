@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+  <title>Track Ticket Prices — TicketHawk</title>
+  <meta name="description" content="Track ticket prices for any event on SeatGeek. Get notified when prices drop." />
+  <link rel="canonical" href="https://tixhawk.com/track" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="icon" type="image/png" href="./media_assets/fav.png" />
+  <link rel="preconnect" href="https://ik.imagekit.io" crossorigin />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tixhawk.com/track" />
+  <meta property="og:title" content="Track Ticket Prices — TicketHawk" />
+  <meta property="og:description" content="Track ticket prices for any event on SeatGeek. Get notified when prices drop." />
+  <link rel="stylesheet" href="./styles.css" />
+  <style>
+    html { scroll-behavior: smooth; }
+    .gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+    .success-bg { background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); }
+    .btn-green { background: #16a34a; }
+    .btn-green:hover { background: #15803d; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-in { animation: fadeIn 0.4s ease-out forwards; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .spinner { animation: spin 1s linear infinite; }
+  </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="https://tixhawk.com/" class="text-xl font-bold gradient-text">TicketHawk</a>
+      <div class="hidden md:flex items-center gap-6 text-gray-700">
+        <a href="https://tixhawk.com/#how-it-works" class="hover:text-gray-900">How it works</a>
+        <a href="https://tixhawk.com/#pricing" class="hover:text-gray-900">Pricing</a>
+        <a href="https://tixhawk.com/#faq" class="hover:text-gray-900">FAQ</a>
+      </div>
+      <a href="https://tixhawk.com/" class="hidden md:block px-4 py-2 gradient-bg text-white rounded-lg hover:opacity-90 transition-opacity text-sm">Back to Home</a>
+    </nav>
+  </header>
+
+  <main class="pt-24 pb-16 px-4">
+    <div class="max-w-xl mx-auto">
+      <!-- Hero -->
+      <div class="text-center mb-8">
+        <div class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold mb-3">Free for now · No credit card</div>
+        <h1 class="text-3xl sm:text-4xl font-bold mb-3">Track Ticket Prices</h1>
+        <p class="text-gray-600 text-lg">Paste any SeatGeek event link. We'll watch the price and text you when it drops.</p>
+      </div>
+
+      <!-- Form Card -->
+      <div id="form-card" class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 fade-in">
+        <form id="track-form" onsubmit="handleSubmit(event)">
+          <div class="space-y-5">
+            <!-- Event URL -->
+            <div>
+              <label for="event_url" class="block text-sm font-semibold text-gray-700 mb-2">SeatGeek Event URL</label>
+              <input
+                type="url"
+                id="event_url"
+                name="event_url"
+                placeholder="https://seatgeek.com/..."
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-all text-gray-900 placeholder-gray-400"
+              />
+              <p class="text-xs text-gray-500 mt-1">Find an event on <a href="https://seatgeek.com" target="_blank" class="text-purple-600 hover:underline">seatgeek.com</a>, click Tickets, and paste that URL here.</p>
+            </div>
+
+            <!-- Ticket Count -->
+            <div>
+              <label for="ticket_count" class="block text-sm font-semibold text-gray-700 mb-2">How many tickets?</label>
+              <select
+                id="ticket_count"
+                name="ticket_count"
+                class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-all text-gray-900 bg-white"
+              >
+                <option value="1">1 ticket</option>
+                <option value="2" selected>2 tickets</option>
+                <option value="3">3 tickets</option>
+                <option value="4">4 tickets</option>
+                <option value="5">5 tickets</option>
+                <option value="6">6 tickets</option>
+                <option value="7">7 tickets</option>
+                <option value="8">8 tickets</option>
+              </select>
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Your email <span class="text-gray-400 font-normal">(optional)</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-all text-gray-900 placeholder-gray-400"
+              />
+              <p class="text-xs text-gray-500 mt-1">We'll email you when tracking starts. SMS alerts coming soon.</p>
+            </div>
+
+            <!-- Submit -->
+            <button
+              type="submit"
+              id="submit-btn"
+              class="w-full btn-green text-white py-3.5 rounded-xl text-base font-semibold hover:bg-green-700 transition-colors flex items-center justify-center gap-2"
+            >
+              <span>Start Tracking</span>
+            </button>
+          </div>
+        </form>
+
+        <p class="text-center text-xs text-gray-500 mt-4">Free for now · No credit card · Cancel anytime</p>
+      </div>
+
+      <!-- Success Card (hidden) -->
+      <div id="success-card" class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 hidden">
+        <div class="text-center">
+          <div class="w-16 h-16 success-bg rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <h2 class="text-2xl font-bold text-gray-900 mb-2">Tracking started!</h2>
+          <p class="text-gray-600 mb-6">We'll text you when the price drops.</p>
+
+          <div id="event-details" class="bg-gray-50 rounded-xl p-4 text-left mb-6">
+            <!-- Event info filled by JS -->
+          </div>
+
+          <div class="bg-purple-50 border border-purple-100 rounded-xl p-4 mb-6">
+            <p class="text-sm text-purple-800">
+              <strong>What happens next:</strong> We're monitoring this event 24/7. When the price drops below your target, we'll send you a text. Keep an eye out!
+            </p>
+          </div>
+
+          <button onclick="resetForm()" class="text-purple-600 hover:underline text-sm font-medium">Track another event →</button>
+        </div>
+      </div>
+
+      <!-- Error Card (hidden) -->
+      <div id="error-card" class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 hidden">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </div>
+          <h2 class="text-2xl font-bold text-gray-900 mb-2">Something went wrong</h2>
+          <p id="error-message" class="text-gray-600 mb-6">Please try again.</p>
+          <button onclick="resetForm()" class="text-purple-600 hover:underline text-sm font-medium">Try again →</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-200 py-6 text-center text-sm text-gray-500">
+    <p>© 2026 <a href="https://digerstudios.com" class="text-purple-600 hover:underline">Diger Studios LLC</a></p>
+  </footer>
+
+  <script>
+    const API_URL = 'https://rudyjellis.zo.space/api/track';
+
+    function setLoading(on) {
+      const btn = document.getElementById('submit-btn');
+      if (on) {
+        btn.disabled = true;
+        btn.innerHTML = '<svg class="w-5 h-5 spinner" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path></svg><span>Starting...</span>';
+      } else {
+        btn.disabled = false;
+        btn.innerHTML = '<span>Start Tracking</span>';
+      }
+    }
+
+    function showCard(cardId) {
+      document.getElementById('form-card').classList.add('hidden');
+      document.getElementById('success-card').classList.add('hidden');
+      document.getElementById('error-card').classList.add('hidden');
+      document.getElementById(cardId).classList.remove('hidden');
+    }
+
+    function resetForm() {
+      document.getElementById('track-form').reset();
+      document.getElementById('event-details').innerHTML = '';
+      showCard('form-card');
+    }
+
+    async function handleSubmit(e) {
+      e.preventDefault();
+      setLoading(true);
+
+      const eventUrl = document.getElementById('event_url').value.trim();
+      const ticketCount = document.getElementById('ticket_count').value;
+      const email = document.getElementById('email').value.trim();
+
+      try {
+        const res = await fetch(API_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ event_url: eventUrl, ticket_count: parseInt(ticketCount), email })
+        });
+
+        const data = await res.json();
+
+        if (data.ok) {
+          const event = data.event;
+          const totalEst = event.currentLow * ticketCount;
+          document.getElementById('event-details').innerHTML = `
+            <div class="space-y-2">
+              <div class="flex justify-between">
+                <span class="text-gray-600">Event</span>
+                <span class="font-semibold text-gray-900">${event.title}</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Venue</span>
+                <span class="font-semibold text-gray-900 text-sm">${event.venue}</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Date</span>
+                <span class="font-semibold text-gray-900 text-sm">${event.date}</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Tickets</span>
+                <span class="font-semibold text-gray-900">${ticketCount}</span>
+              </div>
+              <div class="flex justify-between border-t pt-2 mt-2">
+                <span class="text-gray-600">Est. total now</span>
+                <span class="font-bold text-green-600">$${totalEst.toLocaleString()}${event.currentLow === 0 ? '*' : ''}</span>
+              </div>
+              ${event.currentLow === 0 ? '<p class="text-xs text-gray-400 mt-1">* Price data loading</p>' : ''}
+              ${data.demo ? '<p class="text-xs text-amber-600 mt-2">Demo mode — real SeatGeek data coming soon</p>' : ''}
+            </div>
+          `;
+          showCard('success-card');
+        } else {
+          document.getElementById('error-message').textContent = data.error || 'Something went wrong.';
+          showCard('error-card');
+        }
+      } catch (err) {
+        document.getElementById('error-message').textContent = 'Network error. Please check your connection and try again.';
+        showCard('error-card');
+      } finally {
+        setLoading(false);
+      }
+    }
+  </script>
+</body>
+</html>
